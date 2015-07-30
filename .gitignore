@@ -1,0 +1,9 @@
+*.pyc
+*.db
+.scrapy
+.DS_Store
+.project
+.pydevproject
+.settings
+*.swp
+*.egg-info

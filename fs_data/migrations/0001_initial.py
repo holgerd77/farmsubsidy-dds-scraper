@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Agency',
             fields=[
-                ('country', models.CharField(max_length=2, serialize=False, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
+                ('country', models.CharField(help_text="Two-letter country code (e.g. 'BE', 'CZ', 'PL')", max_length=2, serialize=False, primary_key=True)),
                 ('info_url', models.URLField()),
                 ('scrape_url', models.URLField()),
                 ('comments', models.TextField(blank=True)),
@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=200)),
-                ('country', models.CharField(max_length=2)),
+                ('country', models.CharField(help_text="Two-letter country code (e.g. 'BE', 'CZ', 'PL')", max_length=2)),
                 ('zip_code', models.CharField(max_length=30, blank=True)),
                 ('town', models.CharField(max_length=200)),
                 ('region', models.CharField(max_length=200, blank=True)),

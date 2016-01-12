@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 """
 WSGI config for farmsubsidy_dds project.
 

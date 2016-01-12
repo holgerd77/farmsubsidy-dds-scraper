@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'farmsubsidy_dds.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'farmsubsidy_dds', 'db.sqlite3'),
     }
 }
 

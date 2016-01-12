@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from .models import Country, Payment
+from .models import Agency, Payment
 
 class PaymentAdmin(admin.ModelAdmin):
-    list_display = ('recipient', 'country', 'zip_code', 'town', 'amount')
+    list_display = ('name', 'country', 'zip_code', 'town', 'year', 'amount_nc', 'amount_euro',)
 
 
-admin.site.register(Country)
+admin.site.register(Agency)
 admin.site.register(Payment, PaymentAdmin)
 

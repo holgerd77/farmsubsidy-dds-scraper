@@ -24,11 +24,10 @@ class Payment(models.Model):
     town = models.CharField(max_length=200)
     region = models.CharField(max_length=200, blank=True)
     year = models.IntegerField()
-    sub_payments = models.TextField(blank=True)
     amount_nc = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     nc_symbol = models.CharField(max_length=3, blank=True)
     nc_conv_date = models.DateTimeField(blank=True, null=True)
-    nc_conv_rate = models.DecimalField(max_digits=10, decimal_places=4)
+    nc_conv_rate = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
     amount_euro = models.DecimalField(max_digits=12, decimal_places=2)
 
     def __str__(self):

@@ -28,6 +28,8 @@ class Payment(models.Model):
     nc_symbol = models.CharField(max_length=3, blank=True)
     nc_conv_date = models.DateTimeField(blank=True, null=True)
     nc_conv_rate = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
+    sub_payments_nc = models.TextField(blank=True)
+    sub_payments_euro = models.TextField(blank=True)
     amount_euro = models.DecimalField(max_digits=12, decimal_places=2)
 
     def __str__(self):

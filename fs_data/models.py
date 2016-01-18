@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 from dynamic_scraper.models import Scraper
+import scrapy
 from scrapy.contrib.djangoitem import DjangoItem
 
 
@@ -36,5 +37,22 @@ class Payment(models.Model):
         return "%s [%s|%d]" % (self.recipient, self.country, self.amount)
 
 
+def sps_str2json(sps_str):
+    return { "test": "Toast" }
+
+
+def serialize_sps_nc(sps_str):
+    sps_json = sps_str2json(sps_str)
+    #Conversion of currency values
+    return sps_json
+
+
+def serialize_sps_euro(sps_str):
+    sps_json = sps_str2json(sps_str)
+    return sps_json
+
+
 class PaymentItem(DjangoItem):
     django_model = Payment
+    sub_payments_nc = scrapy.Field(serializer=serialize_sps_nc)
+    sub_payments_euro = scrapy.Field(serializer=serialize_sps_euro)

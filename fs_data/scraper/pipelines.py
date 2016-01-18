@@ -41,8 +41,8 @@ class DjangoWriterPipeline(object):
                 spider.log("Using cached {symbol} currency conversion rate from fixer.io API.".format(
                     symbol=symbol))
             
-            item['amount_euro'] = item['amount_nc']
-            item['sub_payments_euro'] = item['sub_payments_nc']
+            item['amount_euro'] = str(round(float(item['amount_nc']) / float(item['nc_conv_rate']), 2))
+            item['sub_payments_euro'] = str(item['nc_conv_rate']) + 'CONV' + str(item['sub_payments_nc'])
         
         return item
     

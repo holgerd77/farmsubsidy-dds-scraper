@@ -37,19 +37,37 @@ class Payment(models.Model):
         return "%s [%s|%d]" % (self.recipient, self.country, self.amount)
 
 
-def sps_str2json(sps_str):
-    return { "test": "Toast" }
+def sps_str2dict(sps_str):
+    if not sps_str or sps_str == '':
+        return {}
+    sps_list = [x.strip().split(',') for x in sps_str.split('|')]
+    sps_dict = {}
+    for sp_list in sps_list:
+        sps_dict[sp_list[0]] = sp_list[1]
+    return sps_dict
+
+
+def serialize_sps(sps_dict):
+    return sps_dict
 
 
 def serialize_sps_nc(sps_str):
-    sps_json = sps_str2json(sps_str)
-    #Conversion of currency values
-    return sps_json
+    sps_dict = sps_str2dict(sps_str)
+    return serialize_sps(sps_dict)
 
 
 def serialize_sps_euro(sps_str):
-    sps_json = sps_str2json(sps_str)
-    return sps_json
+    conv = False
+    if 'CONV' in sps_str:
+        pos = sps_str.find('CONV')
+        conv_rate = sps_str[0:pos]
+        sps_str = sps_str[pos+4:]
+        conv = True
+    sps_dict = sps_str2dict(sps_str)
+    if conv:
+        for key in sps_dict:
+            sps_dict[key] = str(round(float(sps_dict[key]) / float(conv_rate), 2))
+    return serialize_sps(sps_dict)
 
 
 class PaymentItem(DjangoItem):

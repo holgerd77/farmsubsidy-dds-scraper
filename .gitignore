@@ -7,3 +7,4 @@
 .settings
 *.swp
 *.egg-info
+docs/_build/

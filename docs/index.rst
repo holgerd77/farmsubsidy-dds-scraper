@@ -33,7 +33,11 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
+   
+   scraping_infrastructure.rst
+   search_index.rst
+   backend_api.rst
+   frontend.rst
 
 
 Indices and tables

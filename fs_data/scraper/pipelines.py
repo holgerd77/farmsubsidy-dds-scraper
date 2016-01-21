@@ -41,14 +41,18 @@ class DjangoWriterPipeline(object):
                 spider.log("Using cached {symbol} currency conversion rate from fixer.io API.".format(
                     symbol=symbol))
             
-            item['amount_euro'] = str(round(float(item['amount_nc']) / float(item['nc_conv_rate']), 2))
+            item['amount_nc'] = round(float(item['amount_nc']))
+            item['amount_euro'] = round(float(item['amount_nc']) / float(item['nc_conv_rate']), 2)
             item['sub_payments_euro'] = str(item['nc_conv_rate']) + 'CONV' + str(item['sub_payments_nc'])
+        else:
+            item['amount_euro'] = round(float(item['amount_euro']))
         
         return item
     
     
     def process_item(self, item, spider):
         item = self.prepare_currency_convs(item, spider)
+        item['year'] = int(item['year'])
         
         if spider.conf['DO_ACTION']:
             try:

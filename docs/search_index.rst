@@ -8,13 +8,17 @@ The following version of ``Elastic`` is used for search infrastructure deploymen
 
 
 
+Index Preparation
+-----------------
+
+Input files have to be formatted as ``JSON Lines`` format and are prepared with the
+following command for indexing::
+
+    ./jl2elastic inputfile.json
+
+
 Some internal notes on development
 ----------------------------------
-
-Awk line appending::
-
-    awk ' {print "{\"index\":{}}\n" $0;}' accounts3.json > accounts4.json
-
 
 Indexing::
 

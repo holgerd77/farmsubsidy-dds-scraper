@@ -2,10 +2,16 @@
 Search Index (Elastic)
 ======================
 
-The following version of ``Elastic`` is used for search infrastructure deployment:
+Searching is done with ``Elastic``, currently the following version is used:
 
 * `Elastic 2.1.1 <https://www.elastic.co/>`_
 
+
+Installation
+------------
+
+Download ``Elastic`` and install in folder ``elasticsearch`` (no version number)
+inside the repository.
 
 
 Index Preparation

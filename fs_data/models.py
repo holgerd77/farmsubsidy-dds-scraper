@@ -27,6 +27,7 @@ class Payment(models.Model):
     year = models.IntegerField()
     amount_nc = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     nc_symbol = models.CharField(max_length=3, blank=True)
+    nc_sign = models.CharField(max_length=6, blank=True)
     nc_conv_date = models.DateTimeField(blank=True, null=True)
     nc_conv_rate = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
     sub_payments_nc = models.TextField(blank=True)
@@ -37,23 +38,28 @@ class Payment(models.Model):
         return "%s [%s|%d]" % (self.recipient, self.country, self.amount)
 
 
-def sps_str2dict(sps_str):
+def sps_str2list(sps_str):
     if not sps_str or sps_str == '':
         return {}
-    sps_list = [x.strip().split(',') for x in sps_str.split('|')]
-    sps_dict = {}
-    for sp_list in sps_list:
-        sps_dict[sp_list[0]] = round(float(sp_list[1]), 2)
-    return sps_dict
+    tmp_sps_list = [x.strip().split(',') for x in sps_str.split('|')]
+    sps_list = []
+    for tmp_sp_list in tmp_sps_list:
+        name = tmp_sp_list[0]
+        amount = round(float(tmp_sp_list[1]), 2)
+        sps_list.append({
+            'name': name,
+            'amount': amount,
+        })
+    return sps_list
 
 
-def serialize_sps(sps_dict):
-    return sps_dict
+def serialize_sps(sps_list):
+    return sps_list
 
 
 def serialize_sps_nc(sps_str):
-    sps_dict = sps_str2dict(sps_str)
-    return serialize_sps(sps_dict)
+    sps_list = sps_str2list(sps_str)
+    return serialize_sps(sps_list)
 
 
 def serialize_sps_euro(sps_str):
@@ -63,11 +69,11 @@ def serialize_sps_euro(sps_str):
         conv_rate = sps_str[0:pos]
         sps_str = sps_str[pos+4:]
         conv = True
-    sps_dict = sps_str2dict(sps_str)
+    sps_list = sps_str2list(sps_str)
     if conv:
-        for key in sps_dict:
-            sps_dict[key] = round(float(sps_dict[key]) / float(conv_rate), 2)
-    return serialize_sps(sps_dict)
+        for payment in sps_list:
+            payment['amount'] = round(float(payment['amount']) / float(conv_rate), 2)
+    return serialize_sps(sps_list)
 
 
 class PaymentItem(DjangoItem):

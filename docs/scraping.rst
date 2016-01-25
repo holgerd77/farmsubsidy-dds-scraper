@@ -30,7 +30,7 @@ The project uses the following main ``Python/Django`` libraries:
 
 * `Django 1.8 <https://www.djangoproject.com/>`_
 * `Scrapy 0.24 <http://scrapy.org/>`_
-* `Django Dynamic Scraper 0.9 <django-dynamic-scraper.readthedocs.org/en/latest/>`_
+* `Django Dynamic Scraper (DDS) 0.9 <django-dynamic-scraper.readthedocs.org/en/latest/>`_
 
 Configuration
 -------------
@@ -70,7 +70,14 @@ with the following command::
 Creating a new Scraper
 ----------------------
 
-TODO
+For creating scrapers a ``ScrapedObjectClass`` ``Payment`` has to be defined in the Django admin in addition
+to the ``models.py`` definition, defining the data structure of the scraped payment data.
+
+Scrapers are created per-country wise as ``Scraper`` objects in the Django admin and are referenced in additional
+``Agency`` objects, representing a EU payments agency.
+
+For further documentation and conceptional overview see the 
+`DDS docs <http://django-dynamic-scraper.readthedocs.org/en/>`_
 
 Running a Scraper
 -----------------
@@ -89,4 +96,44 @@ Usage options for scraping behaviour can be found in the corresponding  DDS doc 
 JSON Data Format
 ----------------
 
-TODO
+Scraped items are saved with additional serialization customizations defined in the ``models.py`` module
+as ``JSON Lines`` items, more or less (one additional processing is necessary) ready to be indexed in the
+``Elastic`` index.
+
+If currency is scraped in national unit conversion rate and date is read from `fixer.io <http://fixer.io/>`_ API.
+
+Data format looks like the following::
+
+    {
+      "town": "PERTH",
+      "nc_symbol": "GBP",
+      "amount_nc": 57444.0,
+      "name": "\"A F Angelil T/A \"\"Cluny Estate\"\"\"",
+      "amount_euro": 76126.11,
+      "country": "GB",
+      "sub_payments_euro": [{
+        "amount": 32969.45,
+        "name": "Rural Development"
+      }, {
+        "amount": 43156.83,
+        "name": "Direct Aid"
+      }, {
+        "amount": 0.0,
+        "name": "Market Schemes"
+      }],
+      "sub_payments_nc": [{
+        "amount": 24878.42,
+        "name": "Rural Development"
+      }, {
+        "amount": 32565.71,
+        "name": "Direct Aid"
+      }, {
+        "amount": 0.0,
+        "name": "Market Schemes"
+      }],
+      "year": 2015,
+      "nc_sign": "£",
+      "nc_conv_rate": 0.75459,
+      "nc_conv_date": "2016-01-22",
+      "zip_code": "PH2"
+    }

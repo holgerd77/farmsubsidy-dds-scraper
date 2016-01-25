@@ -13,26 +13,66 @@ Installation
 Download ``Elastic`` and install in folder ``elasticsearch`` (no version number)
 inside the repository.
 
+The local dev server on ``http://localhost:9200`` can then be started with::
 
-Index Preparation
------------------
+    ./server.sh
 
+Index Creation
+--------------
+
+Index Template
+^^^^^^^^^^^^^^
+
+For indexing template in ``conf/template.json`` is used for mapping and has to be
+activated/loaded before first data indexing::
+    
+    curl -XPUT localhost:9200/_template/template_1 -d '@conf/template.json'
+
+The current mapping for the index can be seen with::
+
+    curl -XGET 'http://localhost:9200/farmsubsidy-dds/_mapping/payment?pretty'
+
+Deleting the current template::
+
+    curl -XDELETE localhost:9200/_template/template_1
+
+See installed templates::
+
+    curl -XGET localhost:9200/_template/
+
+
+Index Management
+^^^^^^^^^^^^^^^^
+    
+List indices::
+
+    curl 'localhost:9200/_cat/indices?v'
+
+Delete index::
+
+    curl -XDELETE 'localhost:9200/farmsubsidy-dds?pretty'
+
+Indexing Documents
+------------------
+
+Format Pre-Processing
+^^^^^^^^^^^^^^^^^^^^^
 Input files have to be formatted as ``JSON Lines`` format and are prepared with the
 following command for indexing::
 
     ./jl2elastic inputfile.json
 
+Indexing Documents
+^^^^^^^^^^^^^^^^^^
 
-Some internal notes on development
-----------------------------------
+Index data::
 
-Indexing::
+    curl -XPUT 'localhost:9200/farmsubsidy-dds/payment/_bulk?pretty' --data-binary "@data_elastic.json"
 
-    curl 'localhost:9200/_cat/indices?v'
-    curl -XPUT 'localhost:9200/farmsubsidy-dds-test/payment/_bulk?pretty' --data-binary "@test2.jsonlines"
-    curl -XDELETE 'localhost:9200/farmsubsidy-dds-test?pretty'
+Searching the Index
+-------------------
 
-
-Searching::
+Testing search::
 
     curl 'localhost:9200/farmsubsidy-dds-test/_search?q=PERTH&pretty'
+

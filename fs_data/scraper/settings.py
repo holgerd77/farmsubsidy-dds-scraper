@@ -13,3 +13,7 @@ ITEM_PIPELINES = {
     'dynamic_scraper.pipelines.ValidationPipeline': 400,
     'fs_data.scraper.pipelines.DjangoWriterPipeline': 800,
 }
+
+FEED_EXPORTERS = {
+    #'ujsonlines': 'fs_data.scraper.exporter.UnicodeJsonLinesItemExporter',
+}

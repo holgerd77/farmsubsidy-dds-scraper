@@ -3,7 +3,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 from dynamic_scraper.models import Scraper
 import scrapy
-from scrapy.contrib.djangoitem import DjangoItem
+from scrapy_djangoitem import DjangoItem
 
 
 class Agency(models.Model):
@@ -35,7 +35,7 @@ class Payment(models.Model):
     amount_euro = models.DecimalField(max_digits=12, decimal_places=2)
 
     def __str__(self):
-        return "%s [%s|%d]" % (self.recipient, self.country, self.amount)
+        return "%s [%s|%d]" % (self.name, self.country, self.amount_euro)
 
 
 def sps_str2list(sps_str):

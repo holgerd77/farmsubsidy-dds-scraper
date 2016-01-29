@@ -1,6 +1,5 @@
-import requests
+import logging, requests
 from django.db.utils import IntegrityError
-from scrapy import log
 from scrapy.exceptions import DropItem
 from dynamic_scraper.models import SchedulerRuntime
 
@@ -21,12 +20,13 @@ class DjangoWriterPipeline(object):
                     
                     if symbol in r_json['rates']:
                         conv_rate = r_json['rates'][symbol]
+                        logging.info(str(type(conv_rate)))
                         spider.nc_conv_rate = conv_rate
                         spider.nc_conv_date = conv_date
-                        item['nc_conv_rate'] = conv_rate
+                        item['nc_conv_rate'] = round(conv_rate, 4)  
                         item['nc_conv_date'] = conv_date
                         spider.log("Currency conv rate for {symbol} read from fixer.io API ({rate}, {date}).".format(
-                            symbol=symbol, rate=conv_rate, date=conv_date), log.INFO)
+                            symbol=symbol, rate=conv_rate, date=conv_date), logging.INFO)
                     else:
                         spider.nc_conv_rate_api_request_failed = True
                         raise DropItem("No corresponding currency rate for {symbol} found \
@@ -60,15 +60,15 @@ class DjangoWriterPipeline(object):
                 item.save()
                 
                 spider.action_successful = True
-                spider.log("Item saved.", log.INFO)
+                spider.log("Item saved.", logging.INFO)
 
             except IntegrityError, e:
-                spider.log(str(e), log.ERROR)
-                spider.log(str(item._errors), log.ERROR)
+                spider.log(str(e), logging.ERROR)
+                spider.log(str(item._errors), logging.ERROR)
                 raise DropItem("Missing attribute.")
         else:
             if not item.is_valid():
-                spider.log(str(item._errors), log.ERROR)
+                spider.log(str(item._errors), logging.ERROR)
                 raise DropItem("Missing attribute.")
 
         return item

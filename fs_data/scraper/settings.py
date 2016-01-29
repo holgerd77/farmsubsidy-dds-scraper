@@ -8,6 +8,9 @@ BOT_NAME = 'farmsubsidy_org'
 SPIDER_MODULES = ['dynamic_scraper.spiders', 'fs_data.scraper',]
 USER_AGENT = '%s/%s' % (BOT_NAME, '1.0')
 
+DOWNLOAD_DELAY = 0.25
+DOWNLOAD_TIMEOUT = 30
+
 #Scrapy 0.20+
 ITEM_PIPELINES = {
     'dynamic_scraper.pipelines.ValidationPipeline': 400,
@@ -15,5 +18,5 @@ ITEM_PIPELINES = {
 }
 
 FEED_EXPORTERS = {
-    #'ujsonlines': 'fs_data.scraper.exporter.UnicodeJsonLinesItemExporter',
+    'ujsonlines': 'fs_data.scraper.exporter.UnicodeJsonLinesItemExporter',
 }

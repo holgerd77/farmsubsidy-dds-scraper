@@ -1,6 +1,6 @@
-Django>=1.8,<1.9
-Scrapy>=0.24,<0.25
+Django>=1.9,<1.10
+Scrapy>=1.0,<1.1
 jsonpath-rw>=1.4
 future>=0.15,<0.16
 pillow>=3.0,<4.0
-django-dynamic-scraper==0.9.0
+django-dynamic-scraper>=0.10,<0.11

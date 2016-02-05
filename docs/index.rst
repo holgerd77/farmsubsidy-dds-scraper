@@ -17,13 +17,13 @@ The project consists of the following sub components:
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
 | Name (GitHub)                                                                               | Description                             | Status              | Last Status Update |
 +=============================================================================================+=========================================+=====================+====================+
-| `farmsubsidy-dds-scraper <https://github.com/holgerd77/farmsubsidy-dds-scraper>`__          | Scraping                                | ``Pre-Alpha``       | 2016-01-21         |
+| `farmsubsidy-dds-scraper <https://github.com/holgerd77/farmsubsidy-dds-scraper>`__          | Scraping                                | ``Alpha``           | 2016-02-05         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `farmsubsidy-dds-elastic <https://github.com/holgerd77/farmsubsidy-dds-elastic>`__          | Search Index                            | ``Experimentation`` | 2016-01-22         |
+| `farmsubsidy-dds-elastic <https://github.com/holgerd77/farmsubsidy-dds-elastic>`__          | Search Index                            | ``Pre-Alpha``       | 2016-02-05         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+ 
-| `farmsubsidy-dds-backend-api <https://github.com/holgerd77/farmsubsidy-dds-backend-api>`__  | Backend/API                             | ``Experimentation`` | 2016-01-22         |
+| `farmsubsidy-dds-backend-api <https://github.com/holgerd77/farmsubsidy-dds-backend-api>`__  | Backend/API                             | ``Pre-Alpha``       | 2016-02-05         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `farmsubsidy-dds-frontend <https://github.com/holgerd77/farmsubsidy-dds-frontend>`__        | Frontend                                | ``Not Started``     | 2016-01-21         |
+| `farmsubsidy-dds-frontend <https://github.com/holgerd77/farmsubsidy-dds-frontend>`__        | Frontend                                | ``Experimentation`` | 2016-02-05         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
 
 This documentation provides guidance for installation, setup and technical

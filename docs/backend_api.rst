@@ -33,7 +33,13 @@ Current version of the API: ``v1``
 Common Request Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
++--------------------+------------------------------------------------------+-------------------------------+
+| Name               | Description                                          | Example Values                |
++====================+======================================================+===============================+
+| start              | Result object to start with (default: 0)             | 0, 9 (10th object!            |
++--------------------+------------------------------------------------------+-------------------------------+
+| rows               | Number of rows/objects to return (default: 10)       | 1, 10, 25                     |
++--------------------+------------------------------------------------------+-------------------------------+
 
 
 Common Behaviour
@@ -47,6 +53,8 @@ Payments Endpoint
 ``Payments`` endpoint can be reached at::
 
     /[API_VERSION]/payments/
+
+Results are sorted by ``amount_euro`` by default.
 
 Endpoint-specific Request Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

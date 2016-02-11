@@ -107,18 +107,6 @@
 },
 {
     "model": "dynamic_scraper.scrapedobjattr",
-    "pk": 10,
-    "fields": {
-        "name": "nc_symbol",
-        "order": 90,
-        "obj_class": 1,
-        "attr_type": "S",
-        "id_field": false,
-        "save_to_db": true
-    }
-},
-{
-    "model": "dynamic_scraper.scrapedobjattr",
     "pk": 11,
     "fields": {
         "name": "nc_conv_date",
@@ -646,20 +634,6 @@
         "request_page_type": "MP",
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
-        "mandatory": true
-    }
-},
-{
-    "model": "dynamic_scraper.scraperelem",
-    "pk": 22,
-    "fields": {
-        "scraped_obj_attr": 10,
-        "scraper": 1,
-        "x_path": "",
-        "reg_exp": "",
-        "request_page_type": "MP",
-        "processors": "static",
-        "proc_ctxt": "'static': 'GBP'",
         "mandatory": true
     }
 },

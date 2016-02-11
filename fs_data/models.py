@@ -14,12 +14,12 @@ class Payment(models.Model):
     town = models.CharField(max_length=200)
     region = models.CharField(max_length=200, blank=True)
     year = models.IntegerField()
-    amount_nc = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
+    amount_nc = models.FloatField(blank=True, null=True)
     nc_conv_date = models.DateTimeField(blank=True, null=True)
-    nc_conv_rate = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
+    nc_conv_rate = models.FloatField(blank=True, null=True)
     sub_payments_nc = models.TextField(blank=True)
     sub_payments_euro = models.TextField(blank=True)
-    amount_euro = models.DecimalField(max_digits=12, decimal_places=2)
+    amount_euro = models.FloatField()
 
     def __str__(self):
         return "%s [%s|%d]" % (self.name, self.country, self.amount_euro)
@@ -38,7 +38,7 @@ class Country(models.Model):
     comments = models.TextField(blank=True)
 
     def __str__(self):
-        return '{name} (country)'.format(name=self.name, country=self.country)
+        return '{name} ({c_code})'.format(name=self.name, c_code=self.country_code)
 
 
 def sps_str2list(sps_str):

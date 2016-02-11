@@ -23,7 +23,7 @@ The project consists of the following sub components:
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+ 
 | `farmsubsidy-dds-backend-api <https://github.com/holgerd77/farmsubsidy-dds-backend-api>`__  | Backend/API                             | ``Pre-Alpha``       | 2016-02-05         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `farmsubsidy-dds-frontend <https://github.com/holgerd77/farmsubsidy-dds-frontend>`__        | Frontend                                | ``Experimentation`` | 2016-02-05         |
+| `farmsubsidy-dds-frontend <https://github.com/holgerd77/farmsubsidy-dds-frontend>`__        | Frontend                                | ``Pre-Alpha``       | 2016-02-11         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
 
 This documentation provides guidance for installation, setup and technical

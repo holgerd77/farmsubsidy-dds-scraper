@@ -74,7 +74,7 @@ For creating scrapers a ``ScrapedObjectClass`` ``Payment`` has to be defined in 
 to the ``models.py`` definition, defining the data structure of the scraped payment data.
 
 Scrapers are created per-country wise as ``Scraper`` objects in the Django admin and are referenced in additional
-``Agency`` objects, representing a EU payments agency.
+``Country`` objects, representing a EU member states respectively the associated payments agency.
 
 For further documentation and conceptional overview see the 
 `DDS docs <http://django-dynamic-scraper.readthedocs.org/en/>`_
@@ -84,10 +84,10 @@ Running a Scraper
 
 Scraper can be run from the command line with the following command::
 
-    scrapy crawl --output=test.json --output-format=jsonlines payment_spider -L DEBUG -a id=GB -a max_items_read=4 -a max_pages_read=2
+    scrapy crawl --output=data.json --output-format=jsonlines payment_spider -L DEBUG -a id=GB -a max_items_read=4 -a max_pages_read=2
 
 This will run the scraper connected to the ``Agency`` in the Django admin with the id ``GB`` and
-write the output in a ``JSON Lines`` formatted file called ``test.json``.
+write the output in a ``JSON Lines`` formatted file called ``data.json``.
 
 Usage options for scraping behaviour can be found in the corresponding  DDS doc section for
 `running/testing scrapers <http://django-dynamic-scraper.readthedocs.org/en/latest/getting_started.html#running-testing-your-scraper>`_.
@@ -106,7 +106,6 @@ Data format looks like the following::
 
     {
       "town": "PERTH",
-      "nc_symbol": "GBP",
       "amount_nc": 57444.0,
       "name": "\"A F Angelil T/A \"\"Cluny Estate\"\"\"",
       "amount_euro": 76126.11,
@@ -132,8 +131,22 @@ Data format looks like the following::
         "name": "Market Schemes"
       }],
       "year": 2015,
-      "nc_sign": "£",
       "nc_conv_rate": 0.75459,
       "nc_conv_date": "2016-01-22",
       "zip_code": "PH2"
     }
+
+
+Creating the Countries Endpoint
+-------------------------------
+
+The ``countries`` endpoint of the API (see: :ref:`countries_endpoint`) is taking the
+administrated data from the ``Country`` Django model objects as a starting point.
+
+There is a ``create_countries_endpoint`` Django management command providing the
+``JSON`` output for the API response::
+
+  python manage.py create_countries_endpoint
+
+Recreate the API endpoint every time a country is added and integrate it in the 
+Backend/API python code.

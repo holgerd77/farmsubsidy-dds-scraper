@@ -36,7 +36,7 @@ Common Request Parameters
 +--------------------+------------------------------------------------------+-------------------------------+
 | Name               | Description                                          | Example Values                |
 +====================+======================================================+===============================+
-| start              | Result object to start with (default: 0)             | 0, 9 (10th object!            |
+| start              | Result object to start with (default: 0)             | 0, 9 (10th object!)           |
 +--------------------+------------------------------------------------------+-------------------------------+
 | rows               | Number of rows/objects to return (default: 10)       | 1, 10, 25                     |
 +--------------------+------------------------------------------------------+-------------------------------+
@@ -94,7 +94,6 @@ Example Data Set
 
   _source: {
     town: "London",
-    nc_symbol: "GBP",
     amount_nc: 6568,
     name: "Example Recipient",
     amount_euro: 8631.32,
@@ -141,13 +140,52 @@ agencies.
    the Euro value is not coming originally from the source but is calculated via
    ``fixer.io`` API with the given conv rate at the conv date provided.
 
+.. _countries_endpoint:
+
 Countries Endpoint
 ------------------
 
-TODO
+The ``countries`` endpoint is a simple static endpoint and can be reached at::
 
+  /[API_VERSION]/payments/
 
+It provides a list of all countries where payment data is indexed together
+with some additional information like a countries responsible paying agency,
+associated data and info urls and the like.
 
+There are no request parameters supported at the moment.
+
+Example Request
+^^^^^^^^^^^^^^^
+
+::
+
+  https://[URL_TO_API]/[API_VERSION]/countries/
+
+Example Data Set
+^^^^^^^^^^^^^^^^
+
+::
+
+  {
+      "GB": {
+          "name": "Great Britain", 
+          "agency_name": "GOV.UK - Department for Environment, Food and Rural Affairs", 
+          "info_url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs", 
+          "data_url": "http://cap-payments.defra.gov.uk/", 
+          "nc_symbol": "GBP", 
+          "nc_sign": "£"
+      },
+      ...
+      "IE": {
+          "name": "Ireland", 
+          "agency_name": "gov.ie - Department of Agriculture, Food and the Marine", 
+          "info_url": "http://www.agriculture.gov.ie", 
+          "data_url": "http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp", 
+          "nc_symbol": "", 
+          "nc_sign": ""
+      }
+  }
 
 
 

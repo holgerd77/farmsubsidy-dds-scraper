@@ -6,8 +6,8 @@ from dynamic_scraper.models import SchedulerRuntime
 class DjangoWriterPipeline(object):
     
     def prepare_currency_convs(self, item, spider):
-        if 'nc_symbol' in item and item['nc_symbol'] != '':
-            symbol = item['nc_symbol']
+        if spider.ref_object.nc_symbol != ''::
+            symbol = spider.ref_object.nc_symbol
             if not hasattr(spider, 'nc_conv_rate'):
                 if hasattr(spider, 'nc_conv_rate_api_request_failed'):
                     raise DropItem("First fixer.io API request already failed, will no try again, \

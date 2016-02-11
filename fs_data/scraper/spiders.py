@@ -1,5 +1,5 @@
 from dynamic_scraper.spiders.django_spider import DjangoSpider
-from fs_data.models import Agency, Payment, PaymentItem
+from fs_data.models import Country, Payment, PaymentItem
 
 
 class PaymentSpider(DjangoSpider):
@@ -7,7 +7,7 @@ class PaymentSpider(DjangoSpider):
     name = 'payment_spider'
 
     def __init__(self, *args, **kwargs):
-        self._set_ref_object(Agency, **kwargs)
+        self._set_ref_object(Country, **kwargs)
         self.scraper = self.ref_object.scraper
         self.scrape_url = self.ref_object.scrape_url
         self.scraped_obj_class = Payment

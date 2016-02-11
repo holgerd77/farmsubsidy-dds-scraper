@@ -1,0 +1,724 @@
+[
+{
+    "model": "dynamic_scraper.scrapedobjclass",
+    "pk": 1,
+    "fields": {
+        "name": "Payment",
+        "scraper_scheduler_conf": "\"MIN_TIME\": 15,\r\n\"MAX_TIME\": 10080,\r\n\"INITIAL_NEXT_ACTION_FACTOR\": 10,\r\n\"ZERO_ACTIONS_FACTOR_CHANGE\": 20,\r\n\"FACTOR_CHANGE_FACTOR\": 1.3,\r\n",
+        "checker_scheduler_conf": "\"MIN_TIME\": 1440,\r\n\"MAX_TIME\": 10080,\r\n\"INITIAL_NEXT_ACTION_FACTOR\": 1,\r\n\"ZERO_ACTIONS_FACTOR_CHANGE\": 5,\r\n\"FACTOR_CHANGE_FACTOR\": 1.3,\r\n",
+        "comments": ""
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 1,
+    "fields": {
+        "name": "base",
+        "order": 10,
+        "obj_class": 1,
+        "attr_type": "B",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 2,
+    "fields": {
+        "name": "name",
+        "order": 20,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": true,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 3,
+    "fields": {
+        "name": "country",
+        "order": 30,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": true,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 4,
+    "fields": {
+        "name": "zip_code",
+        "order": 40,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": true,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 5,
+    "fields": {
+        "name": "town",
+        "order": 50,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": true,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 6,
+    "fields": {
+        "name": "region",
+        "order": 60,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 7,
+    "fields": {
+        "name": "year",
+        "order": 70,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": true,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 9,
+    "fields": {
+        "name": "amount_nc",
+        "order": 80,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 10,
+    "fields": {
+        "name": "nc_symbol",
+        "order": 90,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 11,
+    "fields": {
+        "name": "nc_conv_date",
+        "order": 110,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 12,
+    "fields": {
+        "name": "nc_conv_rate",
+        "order": 120,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 13,
+    "fields": {
+        "name": "amount_euro",
+        "order": 130,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 14,
+    "fields": {
+        "name": "sub_payments_nc",
+        "order": 140,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 15,
+    "fields": {
+        "name": "sub_payments_euro",
+        "order": 150,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": true
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 16,
+    "fields": {
+        "name": "extra_dp_url_1",
+        "order": 160,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 17,
+    "fields": {
+        "name": "extra_dp_url_2",
+        "order": 170,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 18,
+    "fields": {
+        "name": "extra_dp_url_3",
+        "order": 180,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 19,
+    "fields": {
+        "name": "sp1",
+        "order": 190,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 20,
+    "fields": {
+        "name": "sp2",
+        "order": 200,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 21,
+    "fields": {
+        "name": "sp3",
+        "order": 210,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 22,
+    "fields": {
+        "name": "sp4",
+        "order": 220,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 23,
+    "fields": {
+        "name": "sp5",
+        "order": 230,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scrapedobjattr",
+    "pk": 24,
+    "fields": {
+        "name": "sp6",
+        "order": 240,
+        "obj_class": 1,
+        "attr_type": "S",
+        "id_field": false,
+        "save_to_db": false
+    }
+},
+{
+    "model": "dynamic_scraper.scraper",
+    "pk": 1,
+    "fields": {
+        "name": "GB (Great Britain) - Environment Department",
+        "scraped_obj_class": 1,
+        "status": "M",
+        "max_items_read": null,
+        "max_items_save": null,
+        "pagination_type": "R",
+        "pagination_on_start": true,
+        "pagination_append_str": "/SearchResults.aspx?Page={page}&Sort=",
+        "pagination_page_replace": "1, 965",
+        "last_scraper_save_alert_period": "",
+        "next_last_scraper_save_alert": "2016-01-12T11:09:39Z",
+        "last_checker_delete_alert_period": "",
+        "next_last_checker_delete_alert": "2016-01-12T11:09:39Z",
+        "comments": "Scraping via normal GET request, Pagination via GET param.\r\n- Reset session cookie manually before starting scraper runs (cookie stays valid a couple of days)\r\n- Manually press 'search' button once within search form on website\r\n\r\nNum pages: 9.649 (192.965 / 20), 2016-01-21",
+        "last_scraper_save": "2016-01-29T14:13:38.894Z",
+        "last_checker_delete": null
+    }
+},
+{
+    "model": "dynamic_scraper.scraper",
+    "pk": 2,
+    "fields": {
+        "name": "IE (Ireland) - Agriculture Department",
+        "scraped_obj_class": 1,
+        "status": "M",
+        "max_items_read": null,
+        "max_items_save": null,
+        "pagination_type": "R",
+        "pagination_on_start": true,
+        "pagination_append_str": "/capben/cap_ben_results_current_year_if.jsp?PageNo={page}",
+        "pagination_page_replace": "1, 129",
+        "last_scraper_save_alert_period": "",
+        "next_last_scraper_save_alert": "2016-01-14T10:37:08Z",
+        "last_checker_delete_alert_period": "",
+        "next_last_checker_delete_alert": "2016-01-14T10:37:08Z",
+        "comments": "1. Go to http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp\r\n2. Open Dev Tools Network section, filter Docs\r\n3. Accept terms, open http://www.agriculture.gov.ie/capben/cap_ben_terms.jsp page in new tab\r\n4. Go to year, do one first search, use cookie for scraping\r\n5. Scrape per Location by manually inserting the Locations into the POST form data of the Request Page Type\r\n    AND adopt region for ScraperElem manually on every region change\r\n6. Divide viewing results by 15 (entries per page) and adopt the range function for pagination\r\n7. Start scraping (move every scraper JSON file to a separate file for later concatenation!)\r\n\r\nGENERAL: Extremely short session period (< 15 min), start scraping process instantly!!!",
+        "last_scraper_save": null,
+        "last_checker_delete": null
+    }
+},
+{
+    "model": "dynamic_scraper.requestpagetype",
+    "pk": 1,
+    "fields": {
+        "page_type": "MP",
+        "scraped_obj_attr": null,
+        "scraper": 1,
+        "content_type": "H",
+        "render_javascript": false,
+        "request_type": "R",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "cookies": "{ \"ASP.NET_SessionId\": \"5xuiw0qpy1tfttfvmdetj355\" }",
+        "meta": "",
+        "form_data": "",
+        "dont_filter": false,
+        "comments": ""
+    }
+},
+{
+    "model": "dynamic_scraper.requestpagetype",
+    "pk": 2,
+    "fields": {
+        "page_type": "MP",
+        "scraped_obj_attr": null,
+        "scraper": 2,
+        "content_type": "H",
+        "render_javascript": false,
+        "request_type": "F",
+        "method": "POST",
+        "headers": "",
+        "body": "",
+        "cookies": "{ \"JSESSIONID\": \"a8c77a18df28b4b6fd443bbaf7af8bedf12b19a67bc9f3a3bdc005a4e1d4b17c\" }",
+        "meta": "",
+        "form_data": "{ \"location\": \"CARLOW\", \"range\": \"6\", \"measure\": \"99\", \"sort\": \"1\" }",
+        "dont_filter": false,
+        "comments": ""
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 1,
+    "fields": {
+        "scraped_obj_attr": 1,
+        "scraper": 1,
+        "x_path": "//table[@class=\"resultstable\"]//tr[not(th)]",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 2,
+    "fields": {
+        "scraped_obj_attr": 2,
+        "scraper": 1,
+        "x_path": "td[2]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 3,
+    "fields": {
+        "scraped_obj_attr": 3,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'GB'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 4,
+    "fields": {
+        "scraped_obj_attr": 4,
+        "scraper": 1,
+        "x_path": "td[3]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 5,
+    "fields": {
+        "scraped_obj_attr": 5,
+        "scraper": 1,
+        "x_path": "td[4]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 6,
+    "fields": {
+        "scraped_obj_attr": 7,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': '2014'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 8,
+    "fields": {
+        "scraped_obj_attr": 9,
+        "scraper": 1,
+        "x_path": "td[8]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "remove_chars",
+        "proc_ctxt": "'remove_chars': '[\u00a3,]+'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 9,
+    "fields": {
+        "scraped_obj_attr": 13,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'PLACEHOLDER'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 10,
+    "fields": {
+        "scraped_obj_attr": 1,
+        "scraper": 2,
+        "x_path": "//div[@id=\"if_content\"]//table[1]//tr",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 11,
+    "fields": {
+        "scraped_obj_attr": 2,
+        "scraper": 2,
+        "x_path": ".//td[1]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 12,
+    "fields": {
+        "scraped_obj_attr": 3,
+        "scraper": 2,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'IE'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 13,
+    "fields": {
+        "scraped_obj_attr": 5,
+        "scraper": 2,
+        "x_path": ".//td[2]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 14,
+    "fields": {
+        "scraped_obj_attr": 6,
+        "scraper": 2,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'CARLOW'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 15,
+    "fields": {
+        "scraped_obj_attr": 7,
+        "scraper": 2,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': '2014'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 16,
+    "fields": {
+        "scraped_obj_attr": 13,
+        "scraper": 2,
+        "x_path": ".//td[3]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "remove_chars",
+        "proc_ctxt": "'remove_chars': '[,]+'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 17,
+    "fields": {
+        "scraped_obj_attr": 14,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'Rural Development,{sp1} | Direct Aid,{sp2} | Market Schemes,{sp3}'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 18,
+    "fields": {
+        "scraped_obj_attr": 15,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'PLACEHOLDER'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 19,
+    "fields": {
+        "scraped_obj_attr": 19,
+        "scraper": 1,
+        "x_path": "td[5]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "remove_chars",
+        "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 20,
+    "fields": {
+        "scraped_obj_attr": 20,
+        "scraper": 1,
+        "x_path": "td[6]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "remove_chars",
+        "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 21,
+    "fields": {
+        "scraped_obj_attr": 21,
+        "scraper": 1,
+        "x_path": "td[7]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "remove_chars",
+        "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 22,
+    "fields": {
+        "scraped_obj_attr": 10,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'GBP'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 23,
+    "fields": {
+        "scraped_obj_attr": 11,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'PLACEHOLDER'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 24,
+    "fields": {
+        "scraped_obj_attr": 12,
+        "scraper": 1,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'PLACEHOLDER'",
+        "mandatory": true
+    }
+},
+{
+    "model": "fs_data.country",
+    "pk": "GB",
+    "fields": {
+        "name": "Great Britain",
+        "agency_name": "GOV.UK - Department for Environment, Food and Rural Affairs",
+        "info_url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+        "data_url": "http://cap-payments.defra.gov.uk/",
+        "nc_symbol": "GBP",
+        "nc_sign": "£",
+        "scrape_url": "http://cap-payments.defra.gov.uk",
+        "scraper": 1,
+        "comments": ""
+    }
+},
+{
+    "model": "fs_data.country",
+    "pk": "IE",
+    "fields": {
+        "name": "Ireland",
+        "agency_name": "gov.ie - Department of Agriculture, Food and the Marine",
+        "info_url": "http://www.agriculture.gov.ie",
+        "data_url": "http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp",
+        "nc_symbol": "",
+        "nc_sign": "",
+        "scrape_url": "http://www.agriculture.gov.ie",
+        "scraper": 2,
+        "comments": ""
+    }
+}
+]

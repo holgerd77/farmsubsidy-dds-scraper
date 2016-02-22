@@ -1,5 +1,6 @@
 import json
 from scrapy.contrib.exporter import BaseItemExporter
+from scrapy.utils.python import to_bytes
 
 
 class UnicodeJsonLinesItemExporter(BaseItemExporter):
@@ -17,4 +18,4 @@ class UnicodeJsonLinesItemExporter(BaseItemExporter):
 
     def export_item(self, item):
         itemdict = dict(self._get_serialized_fields(item))
-        self.file.write(self.encoder.encode(itemdict) + '\n')
+        self.file.write(to_bytes(self.encoder.encode(itemdict) + '\n'))

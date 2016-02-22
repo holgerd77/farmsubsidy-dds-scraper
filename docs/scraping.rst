@@ -29,7 +29,7 @@ install the requirements into a ``Python 2.7`` virtualenv (switch to
 The project uses the following main ``Python/Django`` libraries:
 
 * `Django 1.9 <https://www.djangoproject.com/>`_
-* `Scrapy 1.0 <http://scrapy.org/>`_
+* `Scrapy 1.1 <http://scrapy.org/>`_
 * `Django Dynamic Scraper (DDS) 0.10 <django-dynamic-scraper.readthedocs.org/en/latest/>`_
 
 Configuration
@@ -150,3 +150,18 @@ There is a ``create_countries_endpoint`` Django management command providing the
 
 Recreate the API endpoint every time a country is added and integrate it in the 
 Backend/API python code.
+
+
+Deployment
+----------
+
+Deployment is done on an ``Ubuntu 14.04`` ``AWS/EC2`` instance, Python ``fabric``
+is used for deployment automation.
+
+The following fabric tasks are just for orientation what need to be installed/done
+and are not intended to pass through, depending on your system pre-requisites::
+
+  fabric prepare_system
+
+
+

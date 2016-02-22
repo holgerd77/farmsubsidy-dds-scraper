@@ -62,7 +62,7 @@ class DjangoWriterPipeline(object):
                 spider.action_successful = True
                 spider.log("Item saved.", logging.INFO)
 
-            except IntegrityError, e:
+            except IntegrityError as e:
                 spider.log(str(e), logging.ERROR)
                 spider.log(str(item._errors), logging.ERROR)
                 raise DropItem("Missing attribute.")

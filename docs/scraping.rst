@@ -161,7 +161,11 @@ is used for deployment automation.
 The following fabric tasks are just for orientation what need to be installed/done
 and are not intended to pass through, depending on your system pre-requisites::
 
-  fabric prepare_system
+  fab prepare_system
+  fab install_deps
+
+Script templates for setting up ``Gunicorn``, ``Nginx`` and ``Supervisor`` can be
+found in the ``conf`` folder.
 
 
 

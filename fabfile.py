@@ -16,7 +16,7 @@ def prepare_system():
 @roles('scraper')
 def install_deps():
     deps = [
-        'git',
+        'git', 'nginx', 'supervisor',
         'python3', 'python3-pip', 'python3-dev', 'python-venv',
         'libxml2-dev', 'libffi-dev', 'libssl-dev', 'libxslt1-dev', 'libjpeg-dev',
     ]

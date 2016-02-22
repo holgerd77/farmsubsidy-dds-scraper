@@ -1,5 +1,6 @@
 *.pyc
 *.sqlite3
+/*.json
 .scrapy
 .DS_Store
 .project

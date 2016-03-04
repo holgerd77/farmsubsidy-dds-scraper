@@ -1,22 +1,22 @@
 from fabric.api import env, roles, run, sudo
 
 env.roledefs = {
-    'scraper': ['ubuntu@openfarmsubsidies.org'],
+    'all': ['ubuntu@openfarmsubsidies.org'],
 }
 
 env.key_filename = '~/.ssh/open-farmsubsidies.pem'
-env.activate = 'source ~/venv-scraper/bin/activate'
-env.code_dir = '/home/ubuntu/farmsubsidy-dds-scraper/'
 
-@roles('scraper')
+@roles('all')
 def prepare_system():
     sudo('apt-get update')
     sudo('apt-get upgrade')
 
-@roles('scraper')
+@roles('all')
 def install_deps():
     deps = [
-        'git', 'nginx', 'supervisor',
+        #Generic
+        'git', 'nginx', 'supervisor', 'unzip',
+        #farmsubsidy-dds-scraper
         'python3', 'python3-pip', 'python3-dev', 'python-venv',
         'libxml2-dev', 'libffi-dev', 'libssl-dev', 'libxslt1-dev', 'libjpeg-dev',
     ]

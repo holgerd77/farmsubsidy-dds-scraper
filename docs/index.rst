@@ -19,11 +19,11 @@ The project consists of the following sub components:
 +=============================================================================================+=========================================+=====================+====================+
 | `farmsubsidy-dds-scraper <https://github.com/holgerd77/farmsubsidy-dds-scraper>`__          | Scraping                                | ``Alpha``           | 2016-02-05         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `farmsubsidy-dds-elastic <https://github.com/holgerd77/farmsubsidy-dds-elastic>`__          | Search Index                            | ``Pre-Alpha``       | 2016-02-05         |
+| `farmsubsidy-dds-elastic <https://github.com/holgerd77/farmsubsidy-dds-elastic>`__          | Search Index                            | ``Alpha``           | 2016-03-04         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+ 
-| `farmsubsidy-dds-backend-api <https://github.com/holgerd77/farmsubsidy-dds-backend-api>`__  | Backend/API                             | ``Pre-Alpha``       | 2016-02-05         |
+| `farmsubsidy-dds-backend-api <https://github.com/holgerd77/farmsubsidy-dds-backend-api>`__  | Backend/API                             | ``Alpha``           | 2016-03-04         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `farmsubsidy-dds-frontend <https://github.com/holgerd77/farmsubsidy-dds-frontend>`__        | Frontend                                | ``Pre-Alpha``       | 2016-02-11         |
+| `farmsubsidy-dds-frontend <https://github.com/holgerd77/farmsubsidy-dds-frontend>`__        | Frontend                                | ``Alpha``           | 2016-03-04         |
 +---------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
 
 This documentation provides guidance for installation, setup and technical

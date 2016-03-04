@@ -21,3 +21,8 @@ found in the ``conf`` folder.
 
   sudo /home/ubuntu/.local/share/letsencrypt/bin/letsencrypt certonly -d openfarmsubsidies.org -d www.openfarmsubsidies.org -d scraper.openfarmsubsidies.org -d api.openfarmsubsidies.org
 
+``Elasticsearch`` is installed as deb (Debian) package following 
+`this instructions <https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-14-04>`_.
+
+
+

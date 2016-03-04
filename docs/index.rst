@@ -38,6 +38,7 @@ Contents:
    elastic.rst
    backend_api.rst
    frontend.rst
+   deployment.rst
 
 
 Indices and tables

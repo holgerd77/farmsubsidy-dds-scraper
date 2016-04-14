@@ -33,6 +33,7 @@ class Country(models.Model):
     agency_name = models.CharField(max_length=200)
     info_url = models.URLField()
     data_url = models.URLField()
+    language_code = models.CharField(max_length=2, help_text="Two-letter country code, lower-case (e.g. 'en', 'cs', 'bg')")
     nc_symbol = models.CharField(max_length=3, blank=True, help_text="Symbol of the national currency (e.g. 'GBP'), only enter for non € countries")
     nc_sign = models.CharField(max_length=6, blank=True, help_text="Sign of the national currency (e.g. '£'), only enter for non € countries")
     scrape_url = models.URLField()

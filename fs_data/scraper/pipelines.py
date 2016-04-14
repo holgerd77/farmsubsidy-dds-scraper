@@ -1,4 +1,5 @@
 import logging, requests
+from django.conf import settings
 from django.db.utils import IntegrityError
 from scrapy.exceptions import DropItem
 from dynamic_scraper.models import SchedulerRuntime
@@ -49,9 +50,29 @@ class DjangoWriterPipeline(object):
         
         return item
     
+    def prepare_name_translation(self, item, spider):
+        if 'name_en' in item:
+            item['name_en'] = ''
+            payload = {}
+            payload['key'] = settings.YANDEX_TRANSLATE_API_KEY
+            payload['text'] = item['name']
+            payload['lang'] = spider.ref_object.language_code + '-en'
+            r = requests.get(settings.YANDEX_TRANSLATE_API_ENDPOINT, params=payload)
+            if r.status_code == 200:
+                r_json = r.json()
+                if r_json['text'] and len(r_json['text']) > 0:
+                    item['name_en'] = r_json['text'][0]
+            elif r.status_code == 403:
+                spider.log("Yandex Translate API daily limit of requests exceeded!", logging.WARNING)
+            elif r.status_code == 404:
+                spider.log("Yandex Translate API daily limit on text amount exceeded!", logging.WARNING)
+        return item
+    
     
     def process_item(self, item, spider):
         item = self.prepare_currency_convs(item, spider)
+        item = self.prepare_name_translation(item, spider)
+        
         item['year'] = int(item['year'])
         
         if spider.conf['DO_ACTION']:

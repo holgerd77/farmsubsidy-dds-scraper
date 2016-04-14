@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Yandex Translate API
+YANDEX_TRANSLATE_API_ENDPOINT = 'https://translate.yandex.net/api/v1.5/tr.json/translate'
+YANDEX_TRANSLATE_API_KEY = os.environ['FARMSUBSIDY_DDS_YANDEX_TRANSLATE_API_KEY']
+
 
 # Application definition
 

@@ -1,6 +1,6 @@
-====================================
-Scraping Infrastructure (Django/DDS)
-====================================
+=====================
+Scraping (Django/DDS)
+=====================
 
 Introduction
 ------------
@@ -51,8 +51,11 @@ admin console via the browser (go to ``127.0.0.1:8000``)::
     python manage.py runserver
 
 
+Scraper Handling
+----------------
+
 Importing/exporting Scrapers
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Scrapers can be found in the ``scraper_dumps`` directory inside the repository and imported
 with the following command::
@@ -68,7 +71,7 @@ with the following command::
 
 
 Creating a new Scraper
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 For creating scrapers a ``ScrapedObjectClass`` ``Payment`` has to be defined in the Django admin in addition
 to the ``models.py`` definition, defining the data structure of the scraped payment data.
@@ -80,7 +83,7 @@ For further documentation and conceptional overview see the
 `DDS docs <http://django-dynamic-scraper.readthedocs.org/en/>`_
 
 Running a Scraper
------------------
+^^^^^^^^^^^^^^^^^
 
 Scraper can be run from the command line with the following command::
 
@@ -93,8 +96,11 @@ Usage options for scraping behaviour can be found in the corresponding  DDS doc 
 `running/testing scrapers <http://django-dynamic-scraper.readthedocs.org/en/latest/getting_started.html#running-testing-your-scraper>`_.
 
 
-JSON Data Format
-----------------
+Data Format
+-----------
+
+Format Description
+^^^^^^^^^^^^^^^^^^
 
 Scraped items are saved with additional serialization customizations defined in the ``models.py`` module
 as ``JSON Lines`` items, more or less (one additional processing is necessary) ready to be indexed in the
@@ -135,6 +141,32 @@ Data format looks like the following::
       "nc_conv_date": "2016-01-22",
       "zip_code": "PH2"
     }
+
+Recipient Name Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For recipient name translation the ``Yandex`` translation API is used.
+``YANDEX_TRANSLATE_API_ENDPOINT`` and ``YANDEX_TRANSLATE_API_KEY`` have to be 
+set in ``settings.py`` file.
+
+Translation is automatically activated if ``name_en`` attribute is added to a 
+scraper of a specific country, leave attribute for scrapers with no translation
+(e.g. ``GB``).
+
+Yandex has the current API limits:
+
+* 1.000.000 characters per day
+* 10.000.000 characters per month
+
+``OpenFarmsubsidies`` scraping is coming close, so API usage has to be actively
+managed/recorded to avoid reaching limitations.
+
+Take the following formula for character estimates:
+
+* (Number of recipients (``wc -l``)) * 15 characters/recipient
+
+Try to stay under 80% of day/month limit, distribute (translated) scraper runs to different
+days, avoid double runs.
 
 
 Creating the Countries Endpoint

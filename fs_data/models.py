@@ -10,6 +10,7 @@ from scrapy_djangoitem import DjangoItem
 
 class Payment(models.Model):
     name = models.CharField(max_length=200)
+    name_en = models.CharField(max_length=200, blank=True)
     country = models.CharField(max_length=2, help_text="Two-letter country code (e.g. 'BE', 'CZ', 'PL')")
     zip_code = models.CharField(max_length=30, blank=True)
     town = models.CharField(max_length=200)

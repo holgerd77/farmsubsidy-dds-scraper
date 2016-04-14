@@ -7,4 +7,4 @@ if [ "$#" -ne 5 ]; then
   exit 1
 fi
 
-scrapy crawl --output=$1 --output-format=jsonlines payment_spider -L $2 -a id=$3 -a max_items_read=$5 -a max_pages_read=$5
+scrapy crawl --output=$1 --output-format=ujsonlines payment_spider -L $2 -a id=$3 -a max_items_read=$5 -a max_pages_read=$5

@@ -363,7 +363,7 @@
         "pagination_type": "R",
         "pagination_on_start": true,
         "pagination_append_str": "",
-        "pagination_page_replace": "1,3",
+        "pagination_page_replace": "1,20",
         "last_scraper_save_alert_period": "",
         "next_last_scraper_save_alert": "2016-04-15T11:27:55Z",
         "last_checker_delete_alert_period": "",
@@ -1010,20 +1010,6 @@
         "request_page_type": "MP",
         "processors": "",
         "proc_ctxt": "",
-        "mandatory": true
-    }
-},
-{
-    "model": "dynamic_scraper.scraperelem",
-    "pk": 47,
-    "fields": {
-        "scraped_obj_attr": 25,
-        "scraper": 4,
-        "x_path": "",
-        "reg_exp": "",
-        "request_page_type": "MP",
-        "processors": "static",
-        "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
     }
 },

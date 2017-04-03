@@ -16,12 +16,12 @@ def install_deps():
     deps = [
         #Generic
         'git', 'nginx', 'supervisor', 'unzip', 'apache2-utils',
-        #farmsubsidy-dds-scraper
+        #openfarmsubsidies-scraper
         'python3', 'python3-pip', 'python3-dev', 'python-venv',
         'libxml2-dev', 'libffi-dev', 'libssl-dev', 'libxslt1-dev', 'libjpeg-dev',
-        #farmsubsidy-dds-elastic
+        #openfarmsubsidies-elastic
         'openjdk-7-jre',
-        #farmsubsidy-dds-frontend
+        #openfarmsubsidies-frontend
         'nodejs', 'npm',
     ]
     sudo('apt-get install ' + ' '.join(deps))

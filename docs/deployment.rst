@@ -6,7 +6,7 @@ Server Setup
 ------------
 
 Deployment of all server parts is done on an ``Ubuntu 14.04`` ``AWS/EC2`` instance, Python ``fabric``
-is used for deployment automation, fabric files can be found in ``farmsubsidy-dds-scraper`` repository.
+is used for deployment automation, fabric files can be found in ``openfarmsubsidies-scraper`` repository.
 
 The following fabric tasks are just for orientation what need to be installed/done
 and are not intended to pass through, depending on your system pre-requisites::

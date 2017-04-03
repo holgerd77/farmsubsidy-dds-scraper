@@ -19,7 +19,7 @@ Installation
 ------------
 
 The scraping infrastructure project can be installed by cloning the 
-`GitHub <https://github.com/holgerd77/farmsubsidy-dds>`__ repository and 
+`GitHub <https://github.com/holgerd77/openfarmsubsidies>`__ repository and 
 install the requirements into a ``Python 2.7`` virtualenv (switch to 
 ``Python 3`` planned some time after ``Scrapy/Twisted`` is ported) with::
 

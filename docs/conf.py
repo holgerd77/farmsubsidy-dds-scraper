@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# farmsubsidy-dds documentation build configuration file, created by
+# openfarmsubsidies documentation build configuration file, created by
 # sphinx-quickstart on Wed Jan 20 09:32:01 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -45,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'farmsubsidy-dds'
+project = u'openfarmsubsidies'
 copyright = u'2016, Holger Drewes'
 author = u'Holger Drewes'
 
@@ -199,7 +199,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'farmsubsidy-ddsdoc'
+htmlhelp_basename = 'openfarmsubsidiesdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -221,7 +221,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'farmsubsidy-dds.tex', u'farmsubsidy-dds Documentation',
+    (master_doc, 'openfarmsubsidies.tex', u'openfarmsubsidies Documentation',
      u'Holger Drewes', 'manual'),
 ]
 
@@ -251,7 +251,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'farmsubsidy-dds', u'farmsubsidy-dds Documentation',
+    (master_doc, 'openfarmsubsidies', u'openfarmsubsidies Documentation',
      [author], 1)
 ]
 
@@ -265,8 +265,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'farmsubsidy-dds', u'farmsubsidy-dds Documentation',
-     author, 'farmsubsidy-dds', 'One line description of project.',
+    (master_doc, 'openfarmsubsidies', u'openfarmsubsidies Documentation',
+     author, 'openfarmsubsidies', 'One line description of project.',
      'Miscellaneous'),
 ]
 

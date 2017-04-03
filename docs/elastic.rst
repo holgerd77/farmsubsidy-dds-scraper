@@ -30,7 +30,7 @@ activated/loaded before first data indexing::
 
 The current mapping for the index can be seen with::
 
-    curl -XGET 'http://localhost:9200/farmsubsidy-dds/_mapping/payment?pretty'
+    curl -XGET 'http://localhost:9200/openfarmsubsidies/_mapping/payment?pretty'
 
 Deleting the current template::
 
@@ -50,7 +50,7 @@ List indices::
 
 Delete index::
 
-    curl -XDELETE 'localhost:9200/farmsubsidy-dds?pretty'
+    curl -XDELETE 'localhost:9200/openfarmsubsidies?pretty'
 
 Indexing Documents
 ------------------
@@ -67,12 +67,12 @@ Indexing Documents
 
 Index data::
 
-    curl -XPUT 'localhost:9200/farmsubsidy-dds/payment/_bulk?pretty' --data-binary "@data_elastic.json"
+    curl -XPUT 'localhost:9200/openfarmsubsidies/payment/_bulk?pretty' --data-binary "@data_elastic.json"
 
 Searching the Index
 -------------------
 
 Testing search::
 
-    curl 'localhost:9200/farmsubsidy-dds-test/_search?q=PERTH&pretty'
+    curl 'localhost:9200/openfarmsubsidies-test/_search?q=PERTH&pretty'
 

@@ -7,4 +7,8 @@ if [ "$#" -ne 5 ]; then
   exit 1
 fi
 
+if [ -f $1 ]; then
+  echo "File exists, deleting to avoid side effects..."
+  rm $1
+fi
 scrapy crawl --output=$1 --output-format=ujsonlines payment_spider -L $2 -a id=$3 -a max_items_read=$4 -a max_pages_read=$5

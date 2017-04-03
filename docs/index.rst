@@ -34,7 +34,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   scraping.rst
+   scraper.rst
    elastic.rst
    backend_api.rst
    frontend.rst

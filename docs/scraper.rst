@@ -1,6 +1,6 @@
-=====================
-Scraping (Django/DDS)
-=====================
+====================
+Scraper (Django/DDS)
+====================
 
 Introduction
 ------------
@@ -27,7 +27,7 @@ install the requirements into a ``Python 3.5`` virtualenv with::
 
 The project uses the following main ``Python/Django`` libraries:
 
-* `Django 1.9 <https://www.djangoproject.com/>`_
+* `Django 1.10 <https://www.djangoproject.com/>`_
 * `Scrapy 1.3 <http://scrapy.org/>`_
 * `Django Dynamic Scraper (DDS) 0.11 <django-dynamic-scraper.readthedocs.org/en/latest/>`_
 
@@ -35,14 +35,14 @@ Configuration
 -------------
 
 The following environment variables have to be found in your shell environment,
-e.g. by adding lines like ``export FARMSUBSIDY_DDS_SECRET_KEY="..."`` to the
+e.g. by adding lines like ``export OPENFARMSUBSIDIES_SECRET_KEY="..."`` to the
 ``.bash_profile`` file:
 
-+-------------------------------+---------------------------------------------+--------------------+
-| Key                           | Description                                 | Place              |
-+===============================+=============================================+====================+
-|``FARMSUBSIDY_DDS_SECRET_KEY`` | Project specific Django secret key          | ``settings.py``    |
-+-------------------------------+---------------------------------------------+--------------------+
++-------------------------------+-----------------------------------------------+--------------------+
+| Key                           | Description                                   | Place              |
++===============================+===============================================+====================+
+|``OPENFARMSUBSIDIES_SECRET_KEY`` | Project specific Django secret key          | ``settings.py``    |
++-------------------------------+-----------------------------------------------+--------------------+
 
 Starting a local Django server should now provide access to the scraper management
 admin console via the browser (go to ``127.0.0.1:8000``)::

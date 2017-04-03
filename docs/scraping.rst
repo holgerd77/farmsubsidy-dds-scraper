@@ -20,8 +20,7 @@ Installation
 
 The scraping infrastructure project can be installed by cloning the 
 `GitHub <https://github.com/holgerd77/openfarmsubsidies>`__ repository and 
-install the requirements into a ``Python 2.7`` virtualenv (switch to 
-``Python 3`` planned some time after ``Scrapy/Twisted`` is ported) with::
+install the requirements into a ``Python 3.5`` virtualenv with::
 
     pip install -r requirements.txt
     pip install -r requirements_dev.txt # DEV requirements
@@ -29,8 +28,8 @@ install the requirements into a ``Python 2.7`` virtualenv (switch to
 The project uses the following main ``Python/Django`` libraries:
 
 * `Django 1.9 <https://www.djangoproject.com/>`_
-* `Scrapy 1.1 <http://scrapy.org/>`_
-* `Django Dynamic Scraper (DDS) 0.10 <django-dynamic-scraper.readthedocs.org/en/latest/>`_
+* `Scrapy 1.3 <http://scrapy.org/>`_
+* `Django Dynamic Scraper (DDS) 0.11 <django-dynamic-scraper.readthedocs.org/en/latest/>`_
 
 Configuration
 -------------

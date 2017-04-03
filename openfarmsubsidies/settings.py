@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['OPENFARMSUBSIDIES_SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['scraper.openfarmsubsidies.org',]
 
 # Yandex Translate API
 YANDEX_TRANSLATE_API_ENDPOINT = 'https://translate.yandex.net/api/v1.5/tr.json/translate'

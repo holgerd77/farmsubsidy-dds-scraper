@@ -396,6 +396,28 @@
     }
 },
 {
+    "model": "dynamic_scraper.scraper",
+    "pk": 6,
+    "fields": {
+        "name": "CZ (Czech Republic) - SZIF",
+        "scraped_obj_class": 1,
+        "status": "M",
+        "max_items_read": null,
+        "max_items_save": null,
+        "pagination_type": "R",
+        "pagination_on_start": false,
+        "pagination_append_str": "&page={page}",
+        "pagination_page_replace": "1, 21",
+        "last_scraper_save_alert_period": "",
+        "next_last_scraper_save_alert": "2017-04-05T17:05:45Z",
+        "last_checker_delete_alert_period": "",
+        "next_last_checker_delete_alert": "2017-04-05T17:05:45Z",
+        "comments": "Change the year in the scrape URL from the corresponding country object",
+        "last_scraper_save": null,
+        "last_checker_delete": null
+    }
+},
+{
     "model": "dynamic_scraper.requestpagetype",
     "pk": 1,
     "fields": {
@@ -492,6 +514,26 @@
         "meta": "",
         "form_data": "{ \"piv_naam\": \"\", \"pin_begr_jr\": \"2015\", \"piv_postcode\": \"\", \"piv_type_bedrag\": \"\", \"piv_subtype_bedrag\": \"\", \"piv_gemeente\": \"\", \"pin_ondergrens\": \"\", \"pin_bovengrens\": \"\", \"pin_inprod\": \"0\", \"pin_pagesize\": \"10\", \"pin_page_start\": \"{page}\",  \"piv_sort\": \"sort_webnaam\", \"pin_sort_dir\": \"0\", \"piv_lng\": \"EN\" }",
         "dont_filter": true,
+        "comments": ""
+    }
+},
+{
+    "model": "dynamic_scraper.requestpagetype",
+    "pk": 6,
+    "fields": {
+        "page_type": "MP",
+        "scraped_obj_attr": null,
+        "scraper": 6,
+        "content_type": "H",
+        "render_javascript": false,
+        "request_type": "R",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "cookies": "",
+        "meta": "",
+        "form_data": "",
+        "dont_filter": false,
         "comments": ""
     }
 },
@@ -1266,6 +1308,118 @@
     }
 },
 {
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 63,
+    "fields": {
+        "scraped_obj_attr": 1,
+        "scraper": 6,
+        "x_path": "//div[@class=\"container-table\"]//tbody/tr",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 64,
+    "fields": {
+        "scraped_obj_attr": 2,
+        "scraper": 6,
+        "x_path": "td[1]//a/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 65,
+    "fields": {
+        "scraped_obj_attr": 3,
+        "scraper": 6,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'CZ'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 66,
+    "fields": {
+        "scraped_obj_attr": 5,
+        "scraper": 6,
+        "x_path": "td[1]/div/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "",
+        "proc_ctxt": "",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 67,
+    "fields": {
+        "scraped_obj_attr": 7,
+        "scraper": 6,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': '2015'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 68,
+    "fields": {
+        "scraped_obj_attr": 9,
+        "scraper": 6,
+        "x_path": "td[2]/text()",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "remove_chars, substr_replace",
+        "proc_ctxt": "'remove_chars': '\\s+', 'substr_replace': ',:.'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 69,
+    "fields": {
+        "scraped_obj_attr": 11,
+        "scraper": 6,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'PLACEHOLDER'",
+        "mandatory": true
+    }
+},
+{
+    "model": "dynamic_scraper.scraperelem",
+    "pk": 70,
+    "fields": {
+        "scraped_obj_attr": 12,
+        "scraper": 6,
+        "x_path": "",
+        "reg_exp": "",
+        "request_page_type": "MP",
+        "processors": "static",
+        "proc_ctxt": "'static': 'PLACEHOLDER'",
+        "mandatory": true
+    }
+},
+{
     "model": "fs_data.country",
     "pk": "AT",
     "fields": {
@@ -1289,7 +1443,7 @@
         "agency_name": "BelPA - Belgian Paying Agency",
         "info_url": "http://www.belpa.be",
         "data_url": "http://www.belpa.be/belpa/pub/EN/data.html",
-        "language_code": "nl",
+        "language_code": "be",
         "nc_symbol": "",
         "nc_sign": "",
         "scrape_url": "http://www.belpa.be/pub/belpa_calls.get_data",
@@ -1310,6 +1464,22 @@
         "nc_sign": "\u043b\u0432",
         "scrape_url": "http://iacs-online.dfz.bg/apex/f?p=100:1:3291744435169433",
         "scraper": 3,
+        "comments": ""
+    }
+},
+{
+    "model": "fs_data.country",
+    "pk": "CZ",
+    "fields": {
+        "name": "Czech Republic",
+        "agency_name": "SZIF - St\u00e1tn\u00ed zem\u011bd\u011blsk\u00fd interven\u010dn\u00ed fond",
+        "info_url": "http://www.szif.cz",
+        "data_url": "http://www.szif.cz/cs/seznam-prijemcu-dotaci",
+        "language_code": "cs",
+        "nc_symbol": "CZK",
+        "nc_sign": "K\u010d",
+        "scrape_url": "http://www.szif.cz/cs/seznam-prijemcu-dotaci?asc=asc&year=2015&sortby=%2FBIC%2FZC_F201&ino=0",
+        "scraper": 6,
         "comments": ""
     }
 },

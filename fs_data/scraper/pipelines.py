@@ -44,7 +44,8 @@ class DjangoWriterPipeline(object):
             
             item['amount_nc'] = round(float(item['amount_nc']))
             item['amount_euro'] = round(float(item['amount_nc']) / float(item['nc_conv_rate']), 2)
-            item['sub_payments_euro'] = str(item['nc_conv_rate']) + 'CONV' + str(item['sub_payments_nc'])
+            if hasattr(item, 'sub_payments_nc'):
+                item['sub_payments_euro'] = str(item['nc_conv_rate']) + 'CONV' + str(item['sub_payments_nc'])
         else:
             item['amount_euro'] = round(float(item['amount_euro']), 2)
         

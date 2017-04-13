@@ -72,8 +72,10 @@ with the following command::
 Creating a new Scraper
 ^^^^^^^^^^^^^^^^^^^^^^
 
-For creating scrapers a ``ScrapedObjectClass`` ``Payment`` has to be defined in the Django admin in addition
+For creating scrapers a ``ScrapedObjectClass`` ``Payment`` has to be defined in the Django admin
+(see the definition from the scraper dumps) in addition
 to the ``models.py`` definition, defining the data structure of the scraped payment data.
+See the :ref:`data_format` section for description of the different payment attributes.
 
 Scrapers are created per-country wise as ``Scraper`` objects in the Django admin and are referenced in additional
 ``Country`` objects, representing a EU member states respectively the associated payments agency.
@@ -95,11 +97,63 @@ Usage options for scraping behaviour can be found in the corresponding  DDS doc 
 `running/testing scrapers <http://django-dynamic-scraper.readthedocs.org/en/latest/getting_started.html#running-testing-your-scraper>`_.
 
 
+.. _data_format:
+
 Data Format
 -----------
 
-Format Description
-^^^^^^^^^^^^^^^^^^
+Scraper Format Description
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following are the scraped object attributes of a ``Payment`` object. Note that some field
+are either filled in with static values (like the ``country`` attribute) or are automatically 
+filled via external API (like the ``name_en``) attribute and are not directly used in the 
+scraping process:
+
+================= ============== ============== =========================================================================================
+Attribute         Scraped Field  Mandatory      Description
+================= ============== ============== =========================================================================================
+base              Yes            Yes            Container atribute for element scraping, see DDS docs
+name              Yes            Yes            Name of recipient scraped from the site, use both for en and non-en names 
+name_en           No             No             Use ONLY if name should be translated via Yandex API, add static placeholder processor
+country           No             Yes            Always add, with static processor inserting the two-letter country code
+zip_code          Yes            Yes            ZIP code of recipient
+town              Yes            Yes            Town of recipient
+region            Yes            No             Region of recipient
+year              No             Yes            The year of the scraped data, add static placeholder processor
+amount_nc         Yes            Non-€-Country  Use for scraping of non-€-country amounts
+nc_conv_date      No             Non-€-Country  Always use this and following field together with static processor...
+nc_conv_rate      No             Non-€-Country  ...for non-€-countries
+amount_euro       Yes(€)/No      Yes            Use for scraping of €-country amounts, otherwiese static processor
+sub_payments_nc   Indirect       No             Use for scraping sub payments of non-€-countries if available (see extra expl.)
+sub_payments_euro Indirect(€)/No No             Use for scraping sub payments of €-country amounts, otherwiese static processor
+sp-x (sp1,sp2,..) Yes            No             Additional helper attributes for sub payments, both € and non-€
+extra_dp_url_123  Yes            No             Helper attributes for scraping additional data urls per payment, see DDS docs
+================= ============== ============== =========================================================================================
+
+**Additional note on sub_payment scraping:**
+
+Sub payments are indirectly scraped via the ``sp-x`` fields and then added via placeholders into a static processor template of the
+``sub_payments_nc`` or ``sub_payments_euro`` field.
+
+The following is an exemplary static processor template for the Bulgarian scraper::
+
+  'static': 'ЕФГЗ - ДП,{sp1} | ЕФГЗ,{sp2} | ЕЗФРСР - НБ,{sp3} | Публично складиране,{sp4}'
+
+In this case the scraper definition also has to provide entries with ``XPath`` definitions for the
+``sp1``, ``sp2``, ``sp3`` and ``sp4`` fields. The so-scraped values are then automatically added to the static
+processor text replacing the placeholders.
+
+General format for the sub_payment string::
+
+  'static': '[Name of SP1],{sp1} | [Name of SP2],{sp2} | ...'
+
+.. note::
+   Is is possible to add up to six sub payment types to the scraper. The amounts of the sub payments doesn't
+   have to add up to the total amount of the payment.
+
+Output Format Description
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Scraped items are saved with additional serialization customizations defined in the ``models.py`` module
 as ``JSON Lines`` items, more or less (one additional processing is necessary) ready to be indexed in the

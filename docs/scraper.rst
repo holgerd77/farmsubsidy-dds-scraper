@@ -236,4 +236,7 @@ There is a ``create_countries_endpoint`` Django management command providing the
 Recreate the API endpoint every time a country is added and integrate it in the 
 Backend/API python code.
 
+.. note::
+   You can exclude a country by setting the corresponding scraper to ``inactive`` status.
+
 

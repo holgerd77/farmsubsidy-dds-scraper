@@ -11,7 +11,7 @@ class Command(BaseCommand):
         #parser.add_argument('poll_id', nargs='+', type=int)
 
     def handle(self, *args, **options):
-        countries = Country.objects.all()
+        countries = Country.objects.exclude(scraper__status='I')
         countries_dict = OrderedDict()
         
         for c in countries:

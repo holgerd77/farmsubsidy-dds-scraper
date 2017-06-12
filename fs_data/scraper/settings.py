@@ -11,6 +11,8 @@ USER_AGENT = '%s/%s' % (BOT_NAME, '1.0')
 DOWNLOAD_DELAY = 0.25
 DOWNLOAD_TIMEOUT = 30
 
+LOG_LEVEL='INFO'
+
 #Scrapy 0.20+
 ITEM_PIPELINES = {
     'dynamic_scraper.pipelines.ValidationPipeline': 400,

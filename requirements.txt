@@ -1,9 +1,9 @@
 Django>=1.9,<1.10
-Scrapy>=1.1.0rc1,<1.2
+Scrapy>=1.4,<1.5
+scrapy-djangoitem==1.1.1
+django-dynamic-scraper>=0.12,<0.13
+scrapy-splash==0.7.2
 jsonpath-rw>=1.4
 requests>=2.9,<3.0
 future>=0.15,<0.16
 pillow>=3.0,<4.0
-git+https://github.com/holgerd77/django-dynamic-scraper.git@0.10-dev
-git+https://github.com/scrapy-plugins/scrapy-djangoitem.git
-git+https://github.com/scrapinghub/scrapy-splash.git

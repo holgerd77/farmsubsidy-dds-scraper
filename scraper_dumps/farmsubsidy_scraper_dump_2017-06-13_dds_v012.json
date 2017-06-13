@@ -328,6 +328,8 @@
         "name": "GB (Great Britain) - Environment Department",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "R2",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -338,7 +340,7 @@
         "next_last_scraper_save_alert": "2016-01-12T11:09:39Z",
         "last_checker_delete_alert_period": "",
         "next_last_checker_delete_alert": "2016-01-12T11:09:39Z",
-        "comments": "Scraping via normal GET request, Pagination via GET param.\r\n- Reset session cookie manually before starting scraper runs (cookie stays valid a couple of days)\r\n- Manually press 'search' button once within search form on website\r\n\r\nNum pages: 9.649 (192.965 / 20), 2016-01-21",
+        "comments": "Scraping via normal GET request, Pagination via GET param.\r\n- Reset session cookie manually before starting scraper runs (cookie stays valid a couple of days)\r\n- Manually press 'search' button once within search form on website\r\n\r\nNum pages: 9.649 (192.965 / 20), 2016-01-21\r\n\r\nCompletely reworked for 2016 data, scraper has to be rewritten!",
         "last_scraper_save": "2016-01-29T14:13:38.894Z",
         "last_checker_delete": null
     }
@@ -350,6 +352,8 @@
         "name": "IE (Ireland) - Agriculture Department",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "U",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -360,7 +364,7 @@
         "next_last_scraper_save_alert": "2016-01-14T10:37:08Z",
         "last_checker_delete_alert_period": "",
         "next_last_checker_delete_alert": "2016-01-14T10:37:08Z",
-        "comments": "1. Go to http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp, accept terms\r\n2.Open http://www.agriculture.gov.ie/capben/cap_ben_terms.jsp page in new tab (or reload)\r\n3. Go to year, do one first search, use cookie for scraping\r\n4. Scrape per Location by manually inserting the Locations into the POST form data of the Request Page Type\r\n    AND adopt region for ScraperElem manually on every region change\r\n5. Divide viewing results by 15 (entries per page) and adopt the range function for pagination\r\n6. Start scraping (move every scraper JSON file to a separate file for later concatenation!)\r\n\r\nGENERAL: Extremely short session period (< 15 min), start scraping process instantly!!!",
+        "comments": "Step-by-step manual below now working any more, URL leading to 404s, revision needed!\r\n\r\n1. Go to http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp, accept terms\r\n2.Open http://www.agriculture.gov.ie/capben/cap_ben_terms.jsp page in new tab (or reload)\r\n3. Go to year, do one first search, use cookie for scraping\r\n4. Scrape per Location by manually inserting the Locations into the POST form data of the Request Page Type\r\n    AND adopt region for ScraperElem manually on every region change\r\n5. Divide viewing results by 15 (entries per page) and adopt the range function for pagination\r\n6. Start scraping (move every scraper JSON file to a separate file for later concatenation!)\r\n\r\nGENERAL: Extremely short session period (< 15 min), start scraping process instantly!!!",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -372,6 +376,8 @@
         "name": "BG (Bulgaria) - dfz.bg",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "U",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -382,7 +388,7 @@
         "next_last_scraper_save_alert": "2016-02-16T10:22:01Z",
         "last_checker_delete_alert_period": "",
         "next_last_checker_delete_alert": "2016-02-16T10:22:01Z",
-        "comments": "",
+        "comments": "\"No base objects found\" for 2016 data. Has to be revised.",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -394,6 +400,8 @@
         "name": "AT (Austria) - Transparenzdatenbank",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "U",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -404,7 +412,7 @@
         "next_last_scraper_save_alert": "2016-04-15T11:27:55Z",
         "last_checker_delete_alert_period": "",
         "next_last_checker_delete_alert": "2016-04-15T11:27:55Z",
-        "comments": "- Do a search\r\n- Enter the current cookie values for both cookie attributes",
+        "comments": "Request for 2016 data not returing a JSON result, needs to be revised\r\n\r\n- Do a search\r\n- Enter the current cookie values for both cookie attributes",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -416,6 +424,8 @@
         "name": "BE (Belgium) - Belgian Paying Agency",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "BE",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -426,8 +436,8 @@
         "next_last_scraper_save_alert": "2017-04-03T16:05:10Z",
         "last_checker_delete_alert_period": "",
         "next_last_checker_delete_alert": "2017-04-03T16:05:10Z",
-        "comments": "",
-        "last_scraper_save": null,
+        "comments": "Tested for 2016 data",
+        "last_scraper_save": "2017-06-12T12:52:49.071Z",
         "last_checker_delete": null
     }
 },
@@ -438,6 +448,8 @@
         "name": "CZ (Czech Republic) - SZIF",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "BE",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -448,7 +460,7 @@
         "next_last_scraper_save_alert": "2017-04-05T17:05:45Z",
         "last_checker_delete_alert_period": "",
         "next_last_checker_delete_alert": "2017-04-05T17:05:45Z",
-        "comments": "Change the year in the scrape URL from the corresponding country object",
+        "comments": "Tested for 2016 data\r\n\r\nChange the year in the scrape URL from the corresponding country object",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -460,6 +472,8 @@
         "name": "EE (Estonia) - PRIA",
         "scraped_obj_class": 1,
         "status": "M",
+        "work_status": "N",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -482,6 +496,8 @@
         "name": "FI (Finland) - Mavi",
         "scraped_obj_class": 1,
         "status": "I",
+        "work_status": "N",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "N",
@@ -504,6 +520,8 @@
         "name": "ES (Spain) - FEGA",
         "scraped_obj_class": 1,
         "status": "I",
+        "work_status": "N",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "N",
@@ -526,6 +544,8 @@
         "name": "DE (Germany) - BLE",
         "scraped_obj_class": 1,
         "status": "I",
+        "work_status": "N",
+        "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
@@ -613,8 +633,8 @@
         "request_type": "R",
         "method": "POST",
         "headers": "{\r\n   \"Origin\": \"http://transparenzdatenbank.at\",\r\n  \"Referer\": \"http://transparenzdatenbank.at/\",\r\n  \"Pragma\": \"no-cache\",\r\n  \"PAGINATION_CURRENT\": \"{page}\",\r\n  \"PAGINATION_PER_PAGE\": \"20\"\r\n}",
-        "body": "{\"name\":\"\",\"betrag_von\":\"\",\"betrag_bis\":\"\",\"gemeinde\":\"\",\"massnahme\":null,\"jahr\":2014,\"sort\":\"name\"}",
-        "cookies": "{\r\n  \"AMA\": \"!+EzFtvfNe9vMX96KJP8k0UUBF6PPt1gqJihVRylrC5JG9NIhoSZCD8n3DhWuBRaZLvrOdANp05D14ac=\",\r\n  \"TS018cbf1b\": \"015c95df5d740ca5d0c6641feaf36a3d3cfd5a30afd70e929fed632bbe4355111ca0cc87e9ff6e1737450ab71d671cadfaa13556d2\"\r\n}",
+        "body": "{\"name\":\"\",\"betrag_von\":\"\",\"betrag_bis\":\"\",\"gemeinde\":\"\",\"massnahme\":null,\"jahr\":2016,\"sort\":\"name\"}",
+        "cookies": "{\r\n  \"AMA\": \"!hVVFK0/4ftgDrRZJpieQkd15Wvwzqj9sYzc+qdG4spWNoQZKfdnGkI/S6KN0tb6h1jfZgG6JbX2wgfc=\", \r\n \"TS0150c9d9\": \"015c95df5d943f0e4a7a311f7c04328b3b97bf7ee758c925f9076d1dc84b1168aae1a94a03968e89b0919fbcabd16e4b5227a771996ebcdac7ee0dc3ddd5500fc0a2ea94a8\"\r\n}",
         "meta": "",
         "form_data": "",
         "dont_filter": true,
@@ -770,6 +790,7 @@
         "x_path": "//table[@class=\"resultstable\"]//tr[not(th)]",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -784,6 +805,7 @@
         "x_path": "td[2]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -798,6 +820,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'GB'",
         "mandatory": true
@@ -812,6 +835,7 @@
         "x_path": "td[3]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -826,6 +850,7 @@
         "x_path": "td[4]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -840,6 +865,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2014'",
         "mandatory": true
@@ -854,6 +880,7 @@
         "x_path": "td[8]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[\u00a3,]+'",
         "mandatory": true
@@ -868,6 +895,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -882,6 +910,7 @@
         "x_path": "//div[@id=\"if_content\"]//table[1]//tr",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -896,6 +925,7 @@
         "x_path": ".//td[1]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -910,6 +940,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'IE'",
         "mandatory": true
@@ -924,6 +955,7 @@
         "x_path": ".//td[2]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -938,6 +970,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'KILDARE'",
         "mandatory": true
@@ -952,6 +985,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2014'",
         "mandatory": true
@@ -966,6 +1000,7 @@
         "x_path": ".//td[3]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[,]+'",
         "mandatory": true
@@ -980,6 +1015,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'Rural Development,{sp1} | Direct Aid,{sp2} | Market Schemes,{sp3}'",
         "mandatory": true
@@ -994,6 +1030,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1008,6 +1045,7 @@
         "x_path": "td[5]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
         "mandatory": true
@@ -1022,6 +1060,7 @@
         "x_path": "td[6]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
         "mandatory": true
@@ -1036,6 +1075,7 @@
         "x_path": "td[7]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[\u00a3,\\|]+'",
         "mandatory": true
@@ -1050,6 +1090,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1064,6 +1105,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1078,6 +1120,7 @@
         "x_path": "//table[@class=\"t3standard\"]//tr[@onmouseover]",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1092,6 +1135,7 @@
         "x_path": "td[1]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1106,6 +1150,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'BG'",
         "mandatory": true
@@ -1120,6 +1165,7 @@
         "x_path": "td[3]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1134,6 +1180,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2014'",
         "mandatory": true
@@ -1148,6 +1195,7 @@
         "x_path": "td[8]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[,]+'",
         "mandatory": true
@@ -1162,6 +1210,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1176,6 +1225,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1190,6 +1240,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1204,6 +1255,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '\u0415\u0424\u0413\u0417 - \u0414\u041f,{sp1} | \u0415\u0424\u0413\u0417,{sp2} | \u0415\u0417\u0424\u0420\u0421\u0420 - \u041d\u0411,{sp3} | \u041f\u0443\u0431\u043b\u0438\u0447\u043d\u043e \u0441\u043a\u043b\u0430\u0434\u0438\u0440\u0430\u043d\u0435,{sp4}'",
         "mandatory": true
@@ -1218,6 +1270,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1232,6 +1285,7 @@
         "x_path": "td[4]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[,]+'",
         "mandatory": true
@@ -1246,6 +1300,7 @@
         "x_path": "td[5]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[,]+'",
         "mandatory": true
@@ -1260,6 +1315,7 @@
         "x_path": "td[6]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[,]+'",
         "mandatory": true
@@ -1274,6 +1330,7 @@
         "x_path": "td[7]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars",
         "proc_ctxt": "'remove_chars': '[,]+'",
         "mandatory": true
@@ -1288,6 +1345,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1302,6 +1360,7 @@
         "x_path": "$",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1316,6 +1375,7 @@
         "x_path": "name",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1330,6 +1390,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'AT'",
         "mandatory": true
@@ -1344,6 +1405,7 @@
         "x_path": "plz",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1358,6 +1420,7 @@
         "x_path": "gemeinde",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1372,6 +1435,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2014'",
         "mandatory": true
@@ -1386,6 +1450,7 @@
         "x_path": "betrag",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1400,6 +1465,7 @@
         "x_path": "//tr[@bgcolor]",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1414,6 +1480,7 @@
         "x_path": "td[1]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1428,6 +1495,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'BE'",
         "mandatory": true
@@ -1442,6 +1510,7 @@
         "x_path": "td[2]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1456,6 +1525,7 @@
         "x_path": "td[3]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1470,6 +1540,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2015'",
         "mandatory": true
@@ -1484,6 +1555,7 @@
         "x_path": "td[6]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars, substr_replace",
         "proc_ctxt": "'remove_chars': '\\.', 'substr_replace': ',:.'",
         "mandatory": true
@@ -1498,6 +1570,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'EAGF,{sp1} | EAFRD,{sp2}'",
         "mandatory": true
@@ -1512,6 +1585,7 @@
         "x_path": "td[4]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars, substr_replace",
         "proc_ctxt": "'remove_chars': '\\.', 'substr_replace': ',:.'",
         "mandatory": true
@@ -1526,6 +1600,7 @@
         "x_path": "td[5]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars, substr_replace",
         "proc_ctxt": "'remove_chars': '\\.', 'substr_replace': ',:.'",
         "mandatory": true
@@ -1540,6 +1615,7 @@
         "x_path": "//div[@class=\"container-table\"]//tbody/tr",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1554,6 +1630,7 @@
         "x_path": "td[1]//a/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1568,6 +1645,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'CZ'",
         "mandatory": true
@@ -1582,6 +1660,7 @@
         "x_path": "td[1]/div/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1596,6 +1675,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2015'",
         "mandatory": true
@@ -1610,6 +1690,7 @@
         "x_path": "td[2]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars, substr_replace",
         "proc_ctxt": "'remove_chars': '\\s+', 'substr_replace': ',:.'",
         "mandatory": true
@@ -1624,6 +1705,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1638,6 +1720,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'PLACEHOLDER'",
         "mandatory": true
@@ -1652,6 +1735,7 @@
         "x_path": "//table[@class=\"info_tbl\"]/tbody/tr",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1666,6 +1750,7 @@
         "x_path": "td[1]/a/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1680,6 +1765,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'EE'",
         "mandatory": true
@@ -1694,6 +1780,7 @@
         "x_path": "td[2]/text()",
         "reg_exp": "\\d+",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1708,6 +1795,7 @@
         "x_path": "td[2]/text()",
         "reg_exp": "\\w+, \\w+",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1722,6 +1810,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': '2015'",
         "mandatory": true
@@ -1736,6 +1825,7 @@
         "x_path": "td[10]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "remove_chars, substr_replace",
         "proc_ctxt": "'remove_chars': '\\s+', 'substr_replace':',:.'",
         "mandatory": true
@@ -1750,6 +1840,7 @@
         "x_path": "(//table)[3]/tbody/tr[contains(@style, \"#E9E9E9\")]",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1764,6 +1855,7 @@
         "x_path": "//table[@id=\"list\"]//tbody//button",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1778,6 +1870,7 @@
         "x_path": "text()",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1792,6 +1885,7 @@
         "x_path": "",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "static",
         "proc_ctxt": "'static': 'https://www.agrar-fischerei-zahlungen.de/Suche'",
         "mandatory": true
@@ -1806,6 +1900,7 @@
         "x_path": "@value",
         "reg_exp": "",
         "request_page_type": "MP",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true
@@ -1820,6 +1915,7 @@
         "x_path": "(//div[@id=\"beguenstigter\"]//p[contains(@style,\"margin-top\")]//span[@class=\"betrag\"]/text())[1]",
         "reg_exp": "",
         "request_page_type": "DP1",
+        "use_default_procs": true,
         "processors": "",
         "proc_ctxt": "",
         "mandatory": true

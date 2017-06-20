@@ -117,7 +117,7 @@ base              Yes            Yes            Container atribute for element s
 name              Yes            Yes            Name of recipient scraped from the site, use both for en and non-en names 
 name_en           No             No             Use ONLY if name should be translated via Yandex API, add static placeholder processor
 country           No             Yes            Always add, with static processor inserting the two-letter country code
-zip_code          Yes            Yes            ZIP code of recipient
+zip_code          Yes            No             ZIP code of recipient
 town              Yes            Yes            Town of recipient
 region            Yes            No             Region of recipient
 year              No             Yes            The year of the scraped data, add static placeholder processor
@@ -140,10 +140,10 @@ Only scrape sub payments if the two (without market measures)/three main agricul
 otherwise things get divided into too small sections. Use the english naming translation in the following unified form
 (for easier/useful faceting later on search):
 
-========================================================= ========================  =====================================================
+========================================================= ========================= =====================================================
 Payment Type                                              Sub Payment Name          Remarks
 ========================================================= ========================= =====================================================
-European Agricultural Guarantee Fund(EAGF)                EAGF (Direct Payments)    Direct payments to farmers, largest part   
+European Agricultural Guarantee Fund (EAGF)               EAGF (Direct Payments)    Direct payments to farmers, largest part   
 European Agricultural Fund for Rural Development (EAFRD)  EAFRD (Rural Development) Environmental measures, sometimes: ELER, smaller part
 Market Measures (e.g. for milk, fruit market)             Market Schemes            Only sometimes
 ========================================================= ========================= =====================================================

@@ -1,5 +1,5 @@
 import json
-from scrapy.contrib.exporter import BaseItemExporter
+from scrapy.exporters import BaseItemExporter
 from scrapy.utils.python import to_bytes
 
 

@@ -136,9 +136,24 @@ extra_dp_url_123  Yes            No             Helper attributes for scraping a
 Sub payments are indirectly scraped via the ``sp-x`` fields and then added via placeholders into a static processor template of the
 ``sub_payments_nc`` or ``sub_payments_euro`` field.
 
+Only scrape sub payments if the two (without market measures)/three main agricultural subsidy pillars are listed,
+otherwise things get divided into too small sections. Use the english naming translation in the following unified form
+(for easier/useful faceting later on search):
+
+========================================================= ========================  =====================================================
+Payment Type                                              Sub Payment Name          Remarks
+========================================================= ========================= =====================================================
+European Agricultural Guarantee Fund(EAGF)                EAGF (Direct Payments)    Direct payments to farmers, largest part   
+European Agricultural Fund for Rural Development (EAFRD)  EAFRD (Rural Development) Environmental measures, sometimes: ELER, smaller part
+Market Measures (e.g. for milk, fruit market)             Market Schemes            Only sometimes
+========================================================= ========================= =====================================================
+
+The scraped sub payments don't have to sum up to the total subsidy sum, so you can also pick the 2/3 most
+common ones. For other payments than the ones above use an english name translation.
+
 The following is an exemplary static processor template for the Bulgarian scraper::
 
-  'static': 'ЕФГЗ - ДП,{sp1} | ЕФГЗ,{sp2} | ЕЗФРСР - НБ,{sp3} | Публично складиране,{sp4}'
+  'static': 'EAGF (Direct Payments),{sp1} | EAFRD (Rural Development),{sp2} | Market Schemes,{sp3}'
 
 In this case the scraper definition also has to provide entries with ``XPath`` definitions for the
 ``sp1``, ``sp2``, ``sp3`` and ``sp4`` fields. The so-scraped values are then automatically added to the static

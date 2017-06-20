@@ -328,7 +328,7 @@
         "name": "GB (Great Britain) - Environment Department",
         "scraped_obj_class": 1,
         "status": "M",
-        "work_status": "R2",
+        "work_status": "BE",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
@@ -336,12 +336,14 @@
         "pagination_on_start": true,
         "pagination_append_str": "/SearchResults.aspx?Page={page}&Sort=",
         "pagination_page_replace": "1, 9649",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2016-01-12T11:09:39Z",
+        "next_last_scraper_save_alert": "2016-01-12T11:09:39",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2016-01-12T11:09:39Z",
-        "comments": "Scraping via normal GET request, Pagination via GET param.\r\n- Reset session cookie manually before starting scraper runs (cookie stays valid a couple of days)\r\n- Manually press 'search' button once within search form on website\r\n\r\nNum pages: 9.649 (192.965 / 20), 2016-01-21\r\n\r\nCompletely reworked for 2016 data, scraper has to be rewritten!",
-        "last_scraper_save": "2016-01-29T14:13:38.894Z",
+        "next_last_checker_delete_alert": "2016-01-12T11:09:39",
+        "comments": "Scraping via normal GET request, Pagination via GET param.\r\n- Reset session cookie manually before starting scraper runs (cookie stays valid a couple of days)\r\n- Manually press 'search' button once within search form on website\r\n\r\nNum pages: 9.649 (192.965 / 20), 2016-01-21",
+        "last_scraper_save": "2016-01-29T14:13:38.894",
         "last_checker_delete": null
     }
 },
@@ -352,19 +354,21 @@
         "name": "IE (Ireland) - Agriculture Department",
         "scraped_obj_class": 1,
         "status": "M",
-        "work_status": "U",
+        "work_status": "A",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
-        "pagination_type": "R",
+        "pagination_type": "F",
         "pagination_on_start": true,
-        "pagination_append_str": "/capben/cap_ben_results_current_year_if.jsp?PageNo={page}",
-        "pagination_page_replace": "1, 150",
+        "pagination_append_str": "",
+        "pagination_page_replace": "'CARLOW', 'CAVAN'",
+        "follow_pages_by_xpath": "//ul[@class=\"pagination pagination-sm\"]/li/a[text() = \" > \"]/@href",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2016-01-14T10:37:08Z",
+        "next_last_scraper_save_alert": "2016-01-14T10:37:08",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2016-01-14T10:37:08Z",
-        "comments": "Step-by-step manual below now working any more, URL leading to 404s, revision needed!\r\n\r\n1. Go to http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp, accept terms\r\n2.Open http://www.agriculture.gov.ie/capben/cap_ben_terms.jsp page in new tab (or reload)\r\n3. Go to year, do one first search, use cookie for scraping\r\n4. Scrape per Location by manually inserting the Locations into the POST form data of the Request Page Type\r\n    AND adopt region for ScraperElem manually on every region change\r\n5. Divide viewing results by 15 (entries per page) and adopt the range function for pagination\r\n6. Start scraping (move every scraper JSON file to a separate file for later concatenation!)\r\n\r\nGENERAL: Extremely short session period (< 15 min), start scraping process instantly!!!",
+        "next_last_checker_delete_alert": "2016-01-14T10:37:08",
+        "comments": "1. Go to https://publicapps.agriculture.gov.ie/capben/cap_ben_master.jsp, confirm your no-robot status, confirm terms\r\n2. Go to year, do one first search, use cookie for scraping\r\n3. Scrape per Location by manually inserting the Locations into the POST form data of the Request Page Type AND adopt region for ScraperElem manually on every region change\r\n5. Divide viewing results by 15 (entries per page) and adopt the range function for pagination\r\n6. Start scraping (move every scraper JSON file to a separate file for later concatenation!)\r\n\r\nGENERAL: Extremely short session period (< 15 min), start scraping process instantly!!!",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -376,7 +380,7 @@
         "name": "BG (Bulgaria) - dfz.bg",
         "scraped_obj_class": 1,
         "status": "M",
-        "work_status": "U",
+        "work_status": "BE",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
@@ -384,11 +388,13 @@
         "pagination_on_start": true,
         "pagination_append_str": "&pg_min_row={page}&pg_max_rows=50&pg_rows_fetched=50",
         "pagination_page_replace": "0, 51000, 50",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2016-02-16T10:22:01Z",
+        "next_last_scraper_save_alert": "2016-02-16T10:22:01",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2016-02-16T10:22:01Z",
-        "comments": "\"No base objects found\" for 2016 data. Has to be revised.",
+        "next_last_checker_delete_alert": "2016-02-16T10:22:01",
+        "comments": "Scrape/Data URL is changing cryptically for every year.",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -400,20 +406,22 @@
         "name": "AT (Austria) - Transparenzdatenbank",
         "scraped_obj_class": 1,
         "status": "M",
-        "work_status": "U",
+        "work_status": "BE",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
         "pagination_type": "R",
         "pagination_on_start": true,
         "pagination_append_str": "",
-        "pagination_page_replace": "1,20",
+        "pagination_page_replace": "1,1154",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2016-04-15T11:27:55Z",
+        "next_last_scraper_save_alert": "2016-04-15T11:27:55",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2016-04-15T11:27:55Z",
-        "comments": "Request for 2016 data not returing a JSON result, needs to be revised\r\n\r\n- Do a search\r\n- Enter the current cookie values for both cookie attributes",
-        "last_scraper_save": null,
+        "next_last_checker_delete_alert": "2016-04-15T11:27:55",
+        "comments": "- Do a search\r\n- Enter the current cookie values for both cookie attributes",
+        "last_scraper_save": "2017-06-20T08:53:16.382",
         "last_checker_delete": null
     }
 },
@@ -432,12 +440,14 @@
         "pagination_on_start": true,
         "pagination_append_str": "",
         "pagination_page_replace": "1, 202, 10",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2017-04-03T16:05:10Z",
+        "next_last_scraper_save_alert": "2017-04-03T16:05:10",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2017-04-03T16:05:10Z",
+        "next_last_checker_delete_alert": "2017-04-03T16:05:10",
         "comments": "Tested for 2016 data",
-        "last_scraper_save": "2017-06-12T12:52:49.071Z",
+        "last_scraper_save": "2017-06-12T12:52:49.071",
         "last_checker_delete": null
     }
 },
@@ -456,10 +466,12 @@
         "pagination_on_start": false,
         "pagination_append_str": "&page={page}",
         "pagination_page_replace": "1, 21",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2017-04-05T17:05:45Z",
+        "next_last_scraper_save_alert": "2017-04-05T17:05:45",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2017-04-05T17:05:45Z",
+        "next_last_checker_delete_alert": "2017-04-05T17:05:45",
         "comments": "Tested for 2016 data\r\n\r\nChange the year in the scrape URL from the corresponding country object",
         "last_scraper_save": null,
         "last_checker_delete": null
@@ -472,7 +484,7 @@
         "name": "EE (Estonia) - PRIA",
         "scraped_obj_class": 1,
         "status": "M",
-        "work_status": "N",
+        "work_status": "BE",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
@@ -480,11 +492,13 @@
         "pagination_on_start": true,
         "pagination_append_str": "/{page}",
         "pagination_page_replace": "1,21",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2017-04-06T16:05:45Z",
+        "next_last_scraper_save_alert": "2017-04-06T16:05:45",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2017-04-06T16:05:45Z",
-        "comments": "- Before scraper run go to data page, manually press search button and copy the cookie values to the cookie field of the Request Page Type for the main page",
+        "next_last_checker_delete_alert": "2017-04-06T16:05:45",
+        "comments": "- Before scraper run go to data page, manually press search button and copy the cookie values to the cookie field of the Request Page Type for the main page (beware of the __utmz cookie being one (!) value)",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -495,8 +509,8 @@
     "fields": {
         "name": "FI (Finland) - Mavi",
         "scraped_obj_class": 1,
-        "status": "I",
-        "work_status": "N",
+        "status": "M",
+        "work_status": "UR",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
@@ -504,11 +518,13 @@
         "pagination_on_start": false,
         "pagination_append_str": "",
         "pagination_page_replace": "",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2017-04-06T17:11:20Z",
+        "next_last_scraper_save_alert": "2017-04-06T17:11:20",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2017-04-06T17:11:20Z",
-        "comments": "NOT YET WORKING, NO GRIP OF REQUESTS RESPONSIBLE TO FETCH DATA!",
+        "next_last_checker_delete_alert": "2017-04-06T17:11:20",
+        "comments": "NOT YET WORKING, NO GRIP OF REQUESTS RESPONSIBLE TO FETCH DATA!\r\n\r\nRetried 2017-06-19, extremely strange ajax implementation, not working!",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -519,8 +535,8 @@
     "fields": {
         "name": "ES (Spain) - FEGA",
         "scraped_obj_class": 1,
-        "status": "I",
-        "work_status": "N",
+        "status": "M",
+        "work_status": "UR",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
@@ -528,11 +544,13 @@
         "pagination_on_start": false,
         "pagination_append_str": "",
         "pagination_page_replace": "",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2017-04-06T17:29:00Z",
+        "next_last_scraper_save_alert": "2017-04-06T17:29:00",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2017-04-06T17:29:00Z",
-        "comments": "- Do one manual search and copy the cookie values in the cookies field of the Request Page Type for the main page\r\n\r\nNOT YET WORKING, REQUEST IS PROVIDING DIFFERENT RESULT THAN cURL VERSION!",
+        "next_last_checker_delete_alert": "2017-04-06T17:29:00",
+        "comments": "- Do one manual search and copy the cookie values in the cookies field of the Request Page Type for the main page\r\n\r\nNOT YET WORKING, REQUEST IS PROVIDING DIFFERENT RESULT THAN cURL VERSION!\r\n\r\nRe-tested again, 2017-06-19, re-constructed all request info sent, cURL command working, converted plain Python requests version with https://curl.trillworks.com/ not working, no idea yet!",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -543,20 +561,22 @@
     "fields": {
         "name": "DE (Germany) - BLE",
         "scraped_obj_class": 1,
-        "status": "I",
-        "work_status": "N",
+        "status": "M",
+        "work_status": "A",
         "owner": "",
         "max_items_read": null,
         "max_items_save": null,
-        "pagination_type": "R",
+        "pagination_type": "F",
         "pagination_on_start": true,
         "pagination_append_str": "",
-        "pagination_page_replace": "01067,01068",
+        "pagination_page_replace": "\"01067\",\"01068\"",
+        "follow_pages_by_xpath": "",
+        "num_pages_follow": null,
         "last_scraper_save_alert_period": "",
-        "next_last_scraper_save_alert": "2017-04-13T14:23:19Z",
+        "next_last_scraper_save_alert": "2017-04-13T14:23:19",
         "last_checker_delete_alert_period": "",
-        "next_last_checker_delete_alert": "2017-04-13T14:23:19Z",
-        "comments": "Pagination is done via PLZ (results limited to 1.500 per search)\r\n\r\nDo a first search and add session ID to cookies field IN BOTH REQUEST PAGE TYPES!\r\n\r\nNOT WORKING YET SINCE DETAIL PAGES ARE HIDDEN VIA POST REQUESTS!",
+        "next_last_checker_delete_alert": "2017-04-13T14:23:19",
+        "comments": "Pagination is done via PLZ (results limited to 1.500 per search)\r\n\r\nDo a first search and add session ID to cookies field IN BOTH REQUEST PAGE TYPES!",
         "last_scraper_save": null,
         "last_checker_delete": null
     }
@@ -574,7 +594,7 @@
         "method": "GET",
         "headers": "",
         "body": "",
-        "cookies": "{ \"ASP.NET_SessionId\": \"3zp45i45e2wd1xi4s2mpbw45\" }",
+        "cookies": "{ \"ASP.NET_SessionId\": \"dkptrin5ev5f2t2ilzef0w45\" }",
         "meta": "",
         "form_data": "",
         "dont_filter": false,
@@ -594,9 +614,9 @@
         "method": "POST",
         "headers": "",
         "body": "",
-        "cookies": "{ \"JSESSIONID\": \"7016ff4b7efc7c07e6d01724f809a1a04723f89b283c1591fc34bcef3357c3b6\" }",
+        "cookies": "{ \"JSESSIONID\": \"363cd2b4f58c16acb885a14b6cc89ca1f33d6061848ae352789d6e895dd43739\", \"_ga\": \"GA1.3.1332893502.1497270531\", \"_gid\":\"GA1.3.819074970.1497270531\"}",
         "meta": "",
-        "form_data": "{ \"location\": \"KILDARE\", \"range\": \"6\", \"measure\": \"99\", \"sort\": \"1\" }",
+        "form_data": "{ \"searchYear\":\"2016\", \"location\":\"{page}\", \"surname\":\"\", \"forename\":\"\", \"address\":\"\", \"range\":\"6\", \"measure\":\"99\", \"sort\":\"1\", \"PageNo\":\"1\" }",
         "dont_filter": false,
         "comments": ""
     }
@@ -618,7 +638,7 @@
         "meta": "",
         "form_data": "",
         "dont_filter": false,
-        "comments": "Scrape/Data URL is changing cryptically for every year."
+        "comments": ""
     }
 },
 {
@@ -632,9 +652,9 @@
         "render_javascript": false,
         "request_type": "R",
         "method": "POST",
-        "headers": "{\r\n   \"Origin\": \"http://transparenzdatenbank.at\",\r\n  \"Referer\": \"http://transparenzdatenbank.at/\",\r\n  \"Pragma\": \"no-cache\",\r\n  \"PAGINATION_CURRENT\": \"{page}\",\r\n  \"PAGINATION_PER_PAGE\": \"20\"\r\n}",
+        "headers": "{\r\n   \"Origin\": \"http://transparenzdatenbank.at\",\r\n  \"Referer\": \"http://transparenzdatenbank.at/\",\r\n  \"Pragma\": \"no-cache\",\r\n  \"PAGINATION_CURRENT\": \"{page}\",\r\n  \"PAGINATION_PER_PAGE\": \"100\"\r\n}",
         "body": "{\"name\":\"\",\"betrag_von\":\"\",\"betrag_bis\":\"\",\"gemeinde\":\"\",\"massnahme\":null,\"jahr\":2016,\"sort\":\"name\"}",
-        "cookies": "{\r\n  \"AMA\": \"!hVVFK0/4ftgDrRZJpieQkd15Wvwzqj9sYzc+qdG4spWNoQZKfdnGkI/S6KN0tb6h1jfZgG6JbX2wgfc=\", \r\n \"TS0150c9d9\": \"015c95df5d943f0e4a7a311f7c04328b3b97bf7ee758c925f9076d1dc84b1168aae1a94a03968e89b0919fbcabd16e4b5227a771996ebcdac7ee0dc3ddd5500fc0a2ea94a8\"\r\n}",
+        "cookies": "{\r\n  \"AMA\": \"!hVVFK0/4ftgDrRZJpieQkd15Wvwzqj9sYzc+qdG4spWNoQZKfdnGkI/S6KN0tb6h1jfZgG6JbX2wgfc=\", \r\n \"TS0150c9d9\": \"015c95df5d97d58efc2ee27172fad1c7da503aafb1f55abbc9e2fbe29d14ebdf8383de32bce7a63423bea5b76d4d4cd1d56b6862d29da79eb0dae493228d8e7f35e5e5415a\"\r\n}",
         "meta": "",
         "form_data": "",
         "dont_filter": true,
@@ -694,7 +714,7 @@
         "method": "GET",
         "headers": "",
         "body": "",
-        "cookies": "{ \"PHPSESSID\": \"38bcc82342031c78c9473b7b27c67787\", \"__utmt\": \"1\",  \"__utma\": \"181725798.39989778.1491494370.1491494370.1491494830.2\",  \"__utmb\": \"181725798.6.10.1491494830\", \"__utmc\": \"181725798\", \"__utmz\": \"181725798.1491494830.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)\" }",
+        "cookies": "{ \"PHPSESSID\": \"4845e844342b4671bec3fd27a39dd7f0\",\"__utmt\": \"1\",\"__utma\": \"181725798.2097917209.1497352889.1497352889.1497352889.1\",\"__utmb\": \"181725798.2.10.1497352889\",\"__utmc\": \"181725798\",\"__utmz\": \"181725798.1497352889.1.1.utmcsr=127.0.0.1:8000|utmccn=(referral)|utmcmd=referral|utmcct=/admin/fs_data/country/EE/change/\" }",
         "meta": "",
         "form_data": "",
         "dont_filter": false,
@@ -732,11 +752,11 @@
         "render_javascript": false,
         "request_type": "F",
         "method": "POST",
-        "headers": "{ \"Origin\": \"http://www.fega.es\", \"Referer\": \"http://www.fega.es/en/node/41221\", \"Upgrade-Insecure-Requests\": \"1\", \"Accept-Encoding\": \"gzip, deflate\", \"User-Agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\",  \"Accept-Language\": \"de-DE,de;q=0.8,en;q=0.6,en-US;q=0.4\", \"Content-Type\": \"application/x-www-form-urlencoded\",    \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\",   \"Cache-Control\": \"no-cache\",  \"Connection\": \"keep-alive\"}",
+        "headers": "{ \"Pragma\": \"no-cache\", \"Origin\": \"http://www.fega.es\", \"Accept-Encoding\": \"gzip, deflate\", \"Accept-Language\": \"de-DE,de;q=0.8,en;q=0.6,en-US;q=0.4\", \"Upgrade-Insecure-Requests\": \"1\", \"User-Agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36\", \"Content-Type\": \"application/x-www-form-urlencoded\", \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\", \"Cache-Control\": \"no-cache\", \"Referer\": \"http://www.fega.es/en/node/41221\" }",
         "body": "",
-        "cookies": "{ \"BIGipServerwww.fega.es_pruebahosts_80\":\"1862340780.20480.0000\", \"_pk_ref.3.8b1e\":\"%5B%22%22%2C%22%22%2C1491499287%2C%22http%3A%2F%2Ffarmsubsidy.openspending.org%2FES%2F%22%5D\", \"cookie-agreed\":\"2\", \"has_js\":\"1\", \"_pk_id.3.8b1e\":\"18fa5634d2a705e7.1491499287.1.1491499720.1491499287.\", \"_pk_ses.3.8b1e\":\"*\" }",
+        "cookies": "{ \"cookie-agreed\":\"2\", \"perjk87hjiu\":\"!C7g+AcTxG7lUdi93xb5Xqg5NvL6Ky29kFaQkzak1GTI7QluPzDpCeQ5Y1KINqnulhqSqoS4XEge+vX4=\", \"_pk_ref.3.8b1e\":\"%5B%22%22%2C%22%22%2C1497872774%2C%22http%3A%2F%2F127.0.0.1%3A8000%2Fadmin%2Ffs_data%2Fcountry%2F%22%5D\", \"has_js\":\"1\", \"_pk_id.3.8b1e\":\"02cfff674e949249.1497433455.2.1497872871.1497872774.\", \"_pk_ses.3.8b1e\":\"*\" }",
         "meta": "",
-        "form_data": "{ \"w_ejercicio\":\"2015\", \"w_unidadgeo\":\"1\", \"w_apenom_texto\":\"\", \"w_tipo_c_apenom\":\"2\", \"w_cod_prov\":\"99\", \"w_cod_muni\":\"00\", \"w_cod_medida\":\"00\", \"w_importe_menor\":\"\", \"w_importe_mayor\":\"\", \"w_ordenar1\":\"1\", \"send\":\"Ejecutar+Consulta\", \"offset\":\"10\" }",
+        "form_data": "{ \"w_unidadgeo\":\"1\", \"w_ejercicio\":\"2016\", \"w_apenom_texto\":\"\", \"w_tipo_c_apenom\":\"2\", \"w_cod_prov\":\"99\", \"w_cod_muni\":\"00\", \"w_cod_medida\":\"00\", \"w_importe_menor\":\"\", \"w_importe_mayor\":\"\", \"w_ordenar1\":\"1\", \"send\":\"Ejecutar+Consulta\" }",
         "dont_filter": true,
         "comments": ""
     }
@@ -754,7 +774,7 @@
         "method": "POST",
         "headers": "",
         "body": "",
-        "cookies": "{ \"JSESSIONID\":\"6509582E159C388465A09D0DBADA11BF\" }",
+        "cookies": "{ \"JSESSIONID\":\"257355440D1791335B15311C8AF547D8\" }",
         "meta": "",
         "form_data": "{ \"jahr\":\"jahr\",\"name\":\"\",\"plz\":\"01067\",\"ort\":\"\",\"suchtypBetrag\":\"betrag_gesamt\",\"operator\":\"eq\",\"betrag\":\"\",\"suchtypEgfl\":\"egfl_alle\",\"massnahmen.massnahmenEgfl%5B0%5D.kurztext\":\"Direktzahlungen\",\"massnahmen.massnahmenEgfl%5B0%5D.schluessel\":\"00001\",\"massnahmen.massnahmenEgfl%5B0%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B0%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B1%5D.kurztext\":\"Umverteilungspr%C3%A4mie\",\"massnahmen.massnahmenEgfl%5B1%5D.schluessel\":\"00003\",\"massnahmen.massnahmenEgfl%5B1%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B1%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B2%5D.kurztext\":\"Erstattung+nicht+genutzter+Mittel+der+Krisenreserve\",\"massnahmen.massnahmenEgfl%5B2%5D.schluessel\":\"00007\",\"massnahmen.massnahmenEgfl%5B2%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B2%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B3%5D.kurztext\":\"%C3%96ffentliche+Intervention\",\"massnahmen.massnahmenEgfl%5B3%5D.schluessel\":\"00008\",\"massnahmen.massnahmenEgfl%5B3%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B3%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B4%5D.kurztext\":\"Beihilfen+f%C3%BCr+die+private+Lagerhaltung\",\"massnahmen.massnahmenEgfl%5B4%5D.schluessel\":\"00009\",\"massnahmen.massnahmenEgfl%5B4%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B4%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B5%5D.kurztext\":\"Schulobst-+und+-gem%C3%BCseprogramm\",\"massnahmen.massnahmenEgfl%5B5%5D.schluessel\":\"00010\",\"massnahmen.massnahmenEgfl%5B5%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B5%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B6%5D.kurztext\":\"Schulmilchprogramm\",\"massnahmen.massnahmenEgfl%5B6%5D.schluessel\":\"00011\",\"massnahmen.massnahmenEgfl%5B6%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B6%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B7%5D.kurztext\":\"Beihilfen+im+Obst-+und+Gem%C3%BCsesektor\",\"massnahmen.massnahmenEgfl%5B7%5D.schluessel\":\"00012\",\"massnahmen.massnahmenEgfl%5B7%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B7%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B8%5D.kurztext\":\"St%C3%BCtzungsma%C3%9Fnahmen+im+Weinsektor\",\"massnahmen.massnahmenEgfl%5B8%5D.schluessel\":\"00013\",\"massnahmen.massnahmenEgfl%5B8%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B8%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B9%5D.kurztext\":\"Beihilfen+im+Bienenzuchtsektor\",\"massnahmen.massnahmenEgfl%5B9%5D.schluessel\":\"00014\",\"massnahmen.massnahmenEgfl%5B9%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B9%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B10%5D.kurztext\":\"Beihilfe+im+Hopfensektor\",\"massnahmen.massnahmenEgfl%5B10%5D.schluessel\":\"00015\",\"massnahmen.massnahmenEgfl%5B10%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B10%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B11%5D.kurztext\":\"Ausfuhrerstattungen\",\"massnahmen.massnahmenEgfl%5B11%5D.schluessel\":\"00016\",\"massnahmen.massnahmenEgfl%5B11%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B11%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEgfl%5B12%5D.kurztext\":\"Informations-+und+Absatzf%C3%B6rderungsma%C3%9Fnahmen\",\"massnahmen.massnahmenEgfl%5B12%5D.schluessel\":\"00017\",\"massnahmen.massnahmenEgfl%5B12%5D.untergruppe\":\"\",\"_massnahmen.massnahmenEgfl%5B12%5D.gewaehlt\":\"on\",\"suchtypEler\":\"eler_alle\",\"massnahmen.massnahmenEler%5B0%5D.kurztext\":\"Berufsbildungs-+und+Informationsma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B0%5D.schluessel\":\"00019\",\"massnahmen.massnahmenEler%5B0%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B0%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B1%5D.kurztext\":\"Vorruhestand\",\"massnahmen.massnahmenEler%5B1%5D.schluessel\":\"00020\",\"massnahmen.massnahmenEler%5B1%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B1%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B2%5D.kurztext\":\"Inanspruchnahme+von+Beratungsdiensten\",\"massnahmen.massnahmenEler%5B2%5D.schluessel\":\"00021\",\"massnahmen.massnahmenEler%5B2%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B2%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B3%5D.kurztext\":\"Modernisierung+landwirtschaftlicher+Betriebe\",\"massnahmen.massnahmenEler%5B3%5D.schluessel\":\"00022\",\"massnahmen.massnahmenEler%5B3%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B3%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B4%5D.kurztext\":\"Verbesserung+des+wirtschaftlichen+Wertes+der+W%C3%A4lder\",\"massnahmen.massnahmenEler%5B4%5D.schluessel\":\"00023\",\"massnahmen.massnahmenEler%5B4%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B4%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B5%5D.kurztext\":\"Erh%C3%B6hung+der+Wertsch%C3%B6pfung+land-+und+forstwirtschaftlicher+Erzeugnisse\",\"massnahmen.massnahmenEler%5B5%5D.schluessel\":\"00024\",\"massnahmen.massnahmenEler%5B5%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B5%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B6%5D.kurztext\":\"Zusammenarbeit+bei+der+Entwicklung+neuer+Produkte%2C+Verfahren+und+Technologien\",\"massnahmen.massnahmenEler%5B6%5D.schluessel\":\"00025\",\"massnahmen.massnahmenEler%5B6%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B6%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B7%5D.kurztext\":\"Infrastruktur+in+Zusammenhang+mit+der+Entwicklung+des+l%C3%A4ndlichen+Raums\",\"massnahmen.massnahmenEler%5B7%5D.schluessel\":\"00026\",\"massnahmen.massnahmenEler%5B7%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B7%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B8%5D.kurztext\":\"K%C3%BCsten-+und+Hochwasserschutz+%28F%C3%B6rderperiode+2007+-+2013%29\",\"massnahmen.massnahmenEler%5B8%5D.schluessel\":\"00027\",\"massnahmen.massnahmenEler%5B8%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B8%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B9%5D.kurztext\":\"Ausgleichszulage+Berggebiete\",\"massnahmen.massnahmenEler%5B9%5D.schluessel\":\"00028\",\"massnahmen.massnahmenEler%5B9%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B9%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B10%5D.kurztext\":\"Ausgleichszulage+benachteiligte+Gebiete\",\"massnahmen.massnahmenEler%5B10%5D.schluessel\":\"00029\",\"massnahmen.massnahmenEler%5B10%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B10%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B11%5D.kurztext\":\"Natur-+und+Gew%C3%A4sserschutz+auf+landwirtschaftlichen+Fl%C3%A4chen\",\"massnahmen.massnahmenEler%5B11%5D.schluessel\":\"00030\",\"massnahmen.massnahmenEler%5B11%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B11%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B12%5D.kurztext\":\"Agrarumweltma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B12%5D.schluessel\":\"00031\",\"massnahmen.massnahmenEler%5B12%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B12%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B13%5D.kurztext\":\"Tierschutzma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B13%5D.schluessel\":\"00032\",\"massnahmen.massnahmenEler%5B13%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B13%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B14%5D.kurztext\":\"Nichtproduktive+Investitionen\",\"massnahmen.massnahmenEler%5B14%5D.schluessel\":\"00033\",\"massnahmen.massnahmenEler%5B14%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B14%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B15%5D.kurztext\":\"Erstaufforstung+landwirtschaftlicher+Fl%C3%A4chen\",\"massnahmen.massnahmenEler%5B15%5D.schluessel\":\"00034\",\"massnahmen.massnahmenEler%5B15%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B15%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B16%5D.kurztext\":\"Erstaufforstung+nichtlandwirtschaftlicher+Fl%C3%A4chen\",\"massnahmen.massnahmenEler%5B16%5D.schluessel\":\"00035\",\"massnahmen.massnahmenEler%5B16%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B16%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B17%5D.kurztext\":\"Naturschutz+auf+Waldfl%C3%A4chen\",\"massnahmen.massnahmenEler%5B17%5D.schluessel\":\"00036\",\"massnahmen.massnahmenEler%5B17%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B17%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B18%5D.kurztext\":\"Waldumweltma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B18%5D.schluessel\":\"00037\",\"massnahmen.massnahmenEler%5B18%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B18%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B19%5D.kurztext\":\"Wiederaufbau+des+forstwirtschaftlichen+Potenzials\",\"massnahmen.massnahmenEler%5B19%5D.schluessel\":\"00038\",\"massnahmen.massnahmenEler%5B19%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B19%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B20%5D.kurztext\":\"Nicht+produktive+Investitionen+auf+Waldfl%C3%A4chen\",\"massnahmen.massnahmenEler%5B20%5D.schluessel\":\"00039\",\"massnahmen.massnahmenEler%5B20%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B20%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B21%5D.kurztext\":\"Diversifizierung+hin+zu+nichtlandwirtschaftlichen+T%C3%A4tigkeiten\",\"massnahmen.massnahmenEler%5B21%5D.schluessel\":\"00040\",\"massnahmen.massnahmenEler%5B21%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B21%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B22%5D.kurztext\":\"Unternehmensgr%C3%BCndung\",\"massnahmen.massnahmenEler%5B22%5D.schluessel\":\"00041\",\"massnahmen.massnahmenEler%5B22%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B22%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B23%5D.kurztext\":\"F%C3%B6rderung+des+Fremdenverkehrs\",\"massnahmen.massnahmenEler%5B23%5D.schluessel\":\"00042\",\"massnahmen.massnahmenEler%5B23%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B23%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B24%5D.kurztext\":\"Dienstleistungseinrichtungen\",\"massnahmen.massnahmenEler%5B24%5D.schluessel\":\"00043\",\"massnahmen.massnahmenEler%5B24%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B24%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B25%5D.kurztext\":\"Dorferneuerung+und+-entwicklung\",\"massnahmen.massnahmenEler%5B25%5D.schluessel\":\"00044\",\"massnahmen.massnahmenEler%5B25%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B25%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B26%5D.kurztext\":\"Erhaltung+und+Verbesserung+des+l%C3%A4ndlichen+Erbes\",\"massnahmen.massnahmenEler%5B26%5D.schluessel\":\"00045\",\"massnahmen.massnahmenEler%5B26%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B26%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B27%5D.kurztext\":\"Bildungs-+und+Informationsma%C3%9Fnahmen+im+l%C3%A4ndlichen+Raum\",\"massnahmen.massnahmenEler%5B27%5D.schluessel\":\"00046\",\"massnahmen.massnahmenEler%5B27%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B27%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B28%5D.kurztext\":\"Kompetenzentwicklung+lokale+Entwicklungsstrategien\",\"massnahmen.massnahmenEler%5B28%5D.schluessel\":\"00047\",\"massnahmen.massnahmenEler%5B28%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B28%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B29%5D.kurztext\":\"Lokale+Entwicklungsstrategien+%28LEADER%29\",\"massnahmen.massnahmenEler%5B29%5D.schluessel\":\"00048\",\"massnahmen.massnahmenEler%5B29%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B29%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B30%5D.kurztext\":\"Technische+Hilfe\",\"massnahmen.massnahmenEler%5B30%5D.schluessel\":\"00053\",\"massnahmen.massnahmenEler%5B30%5D.untergruppe\":\"1\",\"_massnahmen.massnahmenEler%5B30%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B31%5D.kurztext\":\"Wissenstransfer+und+Informationsma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B31%5D.schluessel\":\"00054\",\"massnahmen.massnahmenEler%5B31%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B31%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B32%5D.kurztext\":\"Beratungs-%2C+Betriebsf%C3%BChrungs-+und+Vertretungsdienste\",\"massnahmen.massnahmenEler%5B32%5D.schluessel\":\"00055\",\"massnahmen.massnahmenEler%5B32%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B32%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B33%5D.kurztext\":\"Investitionen+in+materielle+Verm%C3%B6genswerte\",\"massnahmen.massnahmenEler%5B33%5D.schluessel\":\"00056\",\"massnahmen.massnahmenEler%5B33%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B33%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B34%5D.kurztext\":\"K%C3%BCsten-+und+Hochwasserschutz+%28F%C3%B6rderperiode+2014+-+2020%29\",\"massnahmen.massnahmenEler%5B34%5D.schluessel\":\"00057\",\"massnahmen.massnahmenEler%5B34%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B34%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B35%5D.kurztext\":\"Entwicklung+der+landwirtschaftlichen+Betriebe+und+sonstiger+Unternehmen\",\"massnahmen.massnahmenEler%5B35%5D.schluessel\":\"00058\",\"massnahmen.massnahmenEler%5B35%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B35%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B36%5D.kurztext\":\"Basisdienstleistungen+und+Dorferneuerung\",\"massnahmen.massnahmenEler%5B36%5D.schluessel\":\"00059\",\"massnahmen.massnahmenEler%5B36%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B36%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B37%5D.kurztext\":\"Investitionen+in+die+Waldfl%C3%A4chenentwicklung+und+die+Verbesserung+der+Lebensf%C3%A4higkeit+der+W%C3%A4lder\",\"massnahmen.massnahmenEler%5B37%5D.schluessel\":\"00060\",\"massnahmen.massnahmenEler%5B37%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B37%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B38%5D.kurztext\":\"Agrarumwelt-+und+Klimaschutzma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B38%5D.schluessel\":\"00061\",\"massnahmen.massnahmenEler%5B38%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B38%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B39%5D.kurztext\":\"%C3%96kologischer+Landbau\",\"massnahmen.massnahmenEler%5B39%5D.schluessel\":\"00062\",\"massnahmen.massnahmenEler%5B39%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B39%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B40%5D.kurztext\":\"Natur-+und+Gew%C3%A4sserschutz\",\"massnahmen.massnahmenEler%5B40%5D.schluessel\":\"00063\",\"massnahmen.massnahmenEler%5B40%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B40%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B41%5D.kurztext\":\"Ausgleichszulage+benachteiligte+Gebiete\",\"massnahmen.massnahmenEler%5B41%5D.schluessel\":\"00064\",\"massnahmen.massnahmenEler%5B41%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B41%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B42%5D.kurztext\":\"Tierschutzma%C3%9Fnahmen\",\"massnahmen.massnahmenEler%5B42%5D.schluessel\":\"00065\",\"massnahmen.massnahmenEler%5B42%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B42%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B43%5D.kurztext\":\"Waldumwelt-+und+-klimadienstleistungen\",\"massnahmen.massnahmenEler%5B43%5D.schluessel\":\"00066\",\"massnahmen.massnahmenEler%5B43%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B43%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B44%5D.kurztext\":\"Zusammenarbeit\",\"massnahmen.massnahmenEler%5B44%5D.schluessel\":\"00067\",\"massnahmen.massnahmenEler%5B44%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B44%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B45%5D.kurztext\":\"Lokale+Aktionsgruppen+%28LEADER%29\",\"massnahmen.massnahmenEler%5B45%5D.schluessel\":\"00068\",\"massnahmen.massnahmenEler%5B45%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B45%5D.gewaehlt\":\"on\",\"massnahmen.massnahmenEler%5B46%5D.kurztext\":\"Technische+Hilfe\",\"massnahmen.massnahmenEler%5B46%5D.schluessel\":\"00069\",\"massnahmen.massnahmenEler%5B46%5D.untergruppe\":\"2\",\"_massnahmen.massnahmenEler%5B46%5D.gewaehlt\":\"on\" }",
         "dont_filter": true,
@@ -772,11 +792,31 @@
         "render_javascript": false,
         "request_type": "F",
         "method": "POST",
+        "headers": "{\r\n   \"Pragma\": \"no-cache\",\r\n   \"Origin\": \"https://www.agrar-fischerei-zahlungen.de\",\r\n   \"Accept-Encoding\": \"gzip, deflate, br\",\r\n   \"Accept-Language\": \"de-DE,de;q=0.8,en;q=0.6,en-US;q=0.4\",\r\n   \"Upgrade-Insecure-Requests\": \"1\",\r\n   \"User-Agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36\",\r\n   \"Content-Type\": \"application/x-www-form-urlencoded\",\r\n   \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\",\r\n   \"Cache-Control\": \"no-cache\",\r\n   \"Referer\": \"https://www.agrar-fischerei-zahlungen.de/Suche\",\r\n   \"Connection\": \"keep-alive\"\r\n}",
+        "body": "",
+        "cookies": "{ \"JSESSIONID\":\"257355440D1791335B15311C8AF547D8\" }",
+        "meta": "",
+        "form_data": "{ \"jahr\":\"jahr\", \"name\":\"\", \"ort\":\"\", \"plz\":\"{page}\", \"suchtypBetrag\":\"betrag_gesamt\", \"operator\":\"eq\", \"betrag\":\"\", \"suchtypEgfl\":\"egfl_alle\", \"suchtypEler\":\"eler_alle\", \"viewOffset\":\"0\", \"viewOrderdir\":\"asc\", \"viewOrderby\":\"zahlungsempfaenger\", \"viewCount\":\"13\", \"viewCountBeg\":\"4\", \"viewLimit\":\"10\", \"offset\":\"0\", \"dir\":\"asc\", \"order\":\"zahlungsempfaenger\", \"count\":\"13\", \"countBeg\":\"4\", \"prevLimit\":\"10\", \"limit\":\"10\", \"seite\":\"1\", \"showBeg\":\"{helper1}\" }",
+        "dont_filter": true,
+        "comments": ""
+    }
+},
+{
+    "model": "dynamic_scraper.requestpagetype",
+    "pk": 12,
+    "fields": {
+        "page_type": "FP",
+        "scraped_obj_attr": null,
+        "scraper": 2,
+        "content_type": "H",
+        "render_javascript": false,
+        "request_type": "R",
+        "method": "GET",
         "headers": "",
         "body": "",
-        "cookies": "{ \"JSESSIONID\":\"6509582E159C388465A09D0DBADA11BF\" }",
+        "cookies": "",
         "meta": "",
-        "form_data": "{ \"jahr\":\"jahr\",\"name\":\"\",\"ort\":\"\",\"plz\":\"01067\",\"suchtypBetrag\":\"betrag_gesamt\",\"operator\":\"eq\",\"betrag\":\"\",\"suchtypEgfl\":\"egfl_alle\",\"suchtypEler\":\"eler_alle\",\"viewOffset\":\"0\",\"viewOrderdir\":\"asc\",\"viewOrderby\":\"zahlungsempfaenger\",\"viewCount\":\"50\",\"viewCountBeg\":\"4\",\"viewLimit\":\"50\",\"offset\":\"0\",\"dir\":\"asc\",\"order\":\"zahlungsempfaenger\",\"count\":\"50\",\"countBeg\":\"4\",\"prevLimit\":\"50\",\"limit\":\"50\",\"seite\":\"1\",\"showBeg\":\"9ab0b9fc-c852-4325-869d-e442ec355ff0\" }",
+        "form_data": "",
         "dont_filter": true,
         "comments": ""
     }
@@ -907,7 +947,7 @@
     "fields": {
         "scraped_obj_attr": 1,
         "scraper": 2,
-        "x_path": "//div[@id=\"if_content\"]//table[1]//tr",
+        "x_path": "//div[@class=\"content-results\"]/div[@class=\"row content-results-row\"]",
         "reg_exp": "",
         "request_page_type": "MP",
         "use_default_procs": true,
@@ -922,7 +962,7 @@
     "fields": {
         "scraped_obj_attr": 2,
         "scraper": 2,
-        "x_path": ".//td[1]/text()",
+        "x_path": "div[1]/p/text()",
         "reg_exp": "",
         "request_page_type": "MP",
         "use_default_procs": true,
@@ -952,7 +992,7 @@
     "fields": {
         "scraped_obj_attr": 5,
         "scraper": 2,
-        "x_path": ".//td[2]/text()",
+        "x_path": "div[2]/p/text()",
         "reg_exp": "",
         "request_page_type": "MP",
         "use_default_procs": true,
@@ -972,7 +1012,7 @@
         "request_page_type": "MP",
         "use_default_procs": true,
         "processors": "static",
-        "proc_ctxt": "'static': 'KILDARE'",
+        "proc_ctxt": "'static': '{page}'",
         "mandatory": true
     }
 },
@@ -987,7 +1027,7 @@
         "request_page_type": "MP",
         "use_default_procs": true,
         "processors": "static",
-        "proc_ctxt": "'static': '2014'",
+        "proc_ctxt": "'static': '2016'",
         "mandatory": true
     }
 },
@@ -997,7 +1037,7 @@
     "fields": {
         "scraped_obj_attr": 13,
         "scraper": 2,
-        "x_path": ".//td[3]/text()",
+        "x_path": "div[3]/p/text()",
         "reg_exp": "",
         "request_page_type": "MP",
         "use_default_procs": true,
@@ -1257,7 +1297,7 @@
         "request_page_type": "MP",
         "use_default_procs": true,
         "processors": "static",
-        "proc_ctxt": "'static': '\u0415\u0424\u0413\u0417 - \u0414\u041f,{sp1} | \u0415\u0424\u0413\u0417,{sp2} | \u0415\u0417\u0424\u0420\u0421\u0420 - \u041d\u0411,{sp3} | \u041f\u0443\u0431\u043b\u0438\u0447\u043d\u043e \u0441\u043a\u043b\u0430\u0434\u0438\u0440\u0430\u043d\u0435,{sp4}'",
+        "proc_ctxt": "'static': 'EAGF (Direct Payments),{sp1} | EAFRD (Rural Development),{sp2} | Market Schemes,{sp3}'",
         "mandatory": true
     }
 },
@@ -1295,7 +1335,7 @@
     "model": "dynamic_scraper.scraperelem",
     "pk": 41,
     "fields": {
-        "scraped_obj_attr": 20,
+        "scraped_obj_attr": 21,
         "scraper": 3,
         "x_path": "td[5]/text()",
         "reg_exp": "",
@@ -1310,24 +1350,9 @@
     "model": "dynamic_scraper.scraperelem",
     "pk": 42,
     "fields": {
-        "scraped_obj_attr": 21,
+        "scraped_obj_attr": 20,
         "scraper": 3,
         "x_path": "td[6]/text()",
-        "reg_exp": "",
-        "request_page_type": "MP",
-        "use_default_procs": true,
-        "processors": "remove_chars",
-        "proc_ctxt": "'remove_chars': '[,]+'",
-        "mandatory": true
-    }
-},
-{
-    "model": "dynamic_scraper.scraperelem",
-    "pk": 43,
-    "fields": {
-        "scraped_obj_attr": 22,
-        "scraper": 3,
-        "x_path": "td[7]/text()",
         "reg_exp": "",
         "request_page_type": "MP",
         "use_default_procs": true,
@@ -1437,7 +1462,7 @@
         "request_page_type": "MP",
         "use_default_procs": true,
         "processors": "static",
-        "proc_ctxt": "'static': '2014'",
+        "proc_ctxt": "'static': '2016'",
         "mandatory": true
     }
 },
@@ -1542,7 +1567,7 @@
         "request_page_type": "MP",
         "use_default_procs": true,
         "processors": "static",
-        "proc_ctxt": "'static': '2015'",
+        "proc_ctxt": "'static': '2016'",
         "mandatory": true
     }
 },
@@ -1812,7 +1837,7 @@
         "request_page_type": "MP",
         "use_default_procs": true,
         "processors": "static",
-        "proc_ctxt": "'static': '2015'",
+        "proc_ctxt": "'static': '2016'",
         "mandatory": true
     }
 },
@@ -1922,17 +1947,359 @@
     }
 },
 {
+    "model": "fs_data.payment",
+    "pk": 21,
+    "fields": {
+        "name": "'AGRARGEMEINSCHAFT G\u00d6TTLESBRUNN ''DIE HARRACHER'''",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "2464",
+        "town": "G\u00d6TTLESBRUNN-ARBESTHAL",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 1800.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 22,
+    "fields": {
+        "name": "'ASIST ''ARCH\u00c4OLOGISCH-SOZIALE INITIATIVE STEIERMARK'''",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8020",
+        "town": "GRAZ",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 11502.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 23,
+    "fields": {
+        "name": "'ERZEUGERORGANISATION ''STEIRISCHES GEM\u00dcSE'' GMBH'",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8181",
+        "town": "SANKT RUPRECHT AN DER RAAB",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 176721.18
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 24,
+    "fields": {
+        "name": "100249_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8551",
+        "town": "WIES",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 349.45
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 25,
+    "fields": {
+        "name": "'FORSTVERWALTUNG ''SCHAFGRABEN'' GMBH'",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "1120",
+        "town": "WIEN",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 81237.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 26,
+    "fields": {
+        "name": "'GEMEINN\u00dcTZIGE SIEDLUNGSGENOSSENSCHAFT ''VORST\u00c4DTISCHE KLEINSIEDLUNG'' IN KLAGENFURT, EINGETRAGENE GENOSSENSCHAFT MIT BESCHR\u00c4NKTER HAFTUNG'",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "9020",
+        "town": "KLAGENFURT",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 10000.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 27,
+    "fields": {
+        "name": "100559_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "3281",
+        "town": "OBERNDORF AN DER MELK",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 479.14
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 28,
+    "fields": {
+        "name": "100256_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8510",
+        "town": "STAINZ",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 655.34
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 29,
+    "fields": {
+        "name": "'GOLFCLUB ''\u00dcBER DEN D\u00c4CHERN VON PASSAU'''",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "4785",
+        "town": "FREINBERG",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 297414.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 30,
+    "fields": {
+        "name": "10055_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "7122",
+        "town": "GOLS",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 317.9
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 31,
+    "fields": {
+        "name": "'LEPPERT UND MITBESITZER BETRIEB ''HACKL'''",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "6105",
+        "town": "LEUTASCH",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 1866.59
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 32,
+    "fields": {
+        "name": "100263_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8232",
+        "town": "GRAFENDORF BEI HARTBERG",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 317.86
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 33,
+    "fields": {
+        "name": "'MASCHINENRING TECHNIK MANAGEMENT ''MR-TECHNIK'' EGEN, ABF\u00dcLLGEMEINSCHAFT THERMENREGION'",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "3580",
+        "town": "ROSENBURG-MOLD",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 25500.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 34,
+    "fields": {
+        "name": "100269_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8990",
+        "town": "BAD AUSSEE",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 746.36
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 35,
+    "fields": {
+        "name": "'NATURPARK ''S\u00dcDSTEIERMARK'''",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8430",
+        "town": "LEIBNITZ",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 256858.0
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 36,
+    "fields": {
+        "name": "100270_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8192",
+        "town": "STRALLEGG",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 1114.19
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 37,
+    "fields": {
+        "name": "100275_Anonymisiert",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "8280",
+        "town": "F\u00dcRSTENFELD",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 258.88
+    }
+},
+{
+    "model": "fs_data.payment",
+    "pk": 38,
+    "fields": {
+        "name": "'OPERATIONELLE GRUPPE ''BIOLOGISCHE AMPFERREGULIERUNG'''",
+        "name_en": "",
+        "country": "AT",
+        "zip_code": "3261",
+        "town": "STEINAKIRCHEN AM FORST",
+        "region": "",
+        "year": 2016,
+        "amount_nc": null,
+        "nc_conv_date": null,
+        "nc_conv_rate": null,
+        "sub_payments_nc": "",
+        "sub_payments_euro": "",
+        "amount_euro": 21123.76
+    }
+},
+{
     "model": "fs_data.country",
     "pk": "AT",
     "fields": {
         "name": "Austria",
         "agency_name": "AMA - Transparenzdatenbank EU",
-        "info_url": "http://transparenzdatenbank.at",
-        "data_url": "http://transparenzdatenbank.at",
+        "info_url": "https://transparenzdatenbank.at",
+        "data_url": "https://transparenzdatenbank.at",
         "language_code": "de",
         "nc_symbol": "",
         "nc_sign": "",
-        "scrape_url": "http://transparenzdatenbank.at/suche",
+        "scrape_url": "https://transparenzdatenbank.at/suche",
         "scraper": 4,
         "comments": ""
     }
@@ -1960,11 +2327,11 @@
         "name": "Bulgaria",
         "agency_name": "dfz.bg - State Fund Agriculture",
         "info_url": "http://www.dfz.bg",
-        "data_url": "http://iacs-online.dfz.bg/apex/f?p=100:1:3291744435169433",
+        "data_url": "http://iacs-online.dfz.bg/apex/f?p=100:1:8885864829345916:pg_R_7009528473046037:NO",
         "language_code": "bg",
         "nc_symbol": "BGN",
         "nc_sign": "\u043b\u0432",
-        "scrape_url": "http://iacs-online.dfz.bg/apex/f?p=100:1:3291744435169433",
+        "scrape_url": "http://iacs-online.dfz.bg/apex/f?p=100:1:8885864829345916:pg_R_7009528473046037:NO",
         "scraper": 3,
         "comments": ""
     }
@@ -2072,11 +2439,11 @@
         "name": "Ireland",
         "agency_name": "gov.ie - Department of Agriculture, Food and the Marine",
         "info_url": "http://www.agriculture.gov.ie",
-        "data_url": "http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/paymentsdatabase/cap_ben_master.jsp",
+        "data_url": "http://www.agriculture.gov.ie/agri-foodindustry/euinternationalpolicy/commonagriculturalpolicycap/capbeneficiariesdatabase/",
         "language_code": "en",
         "nc_symbol": "",
         "nc_sign": "",
-        "scrape_url": "http://www.agriculture.gov.ie",
+        "scrape_url": "https://publicapps.agriculture.gov.ie/capben/searchcurrent.do",
         "scraper": 2,
         "comments": ""
     }

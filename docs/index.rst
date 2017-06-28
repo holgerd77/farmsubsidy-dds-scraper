@@ -12,19 +12,23 @@ researching EU farmsubsidy payments, build upon the experiences made during
 work on historically grown Farmsubsidy.org 
 `tech infrastructure <http://farmsubsidy.readthedocs.org>`_.
 
-The project consists of the following sub components:
+The project has its own organization on GitHub:
 
-+-------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| Name (GitHub)                                                                                   | Description                             | Status              | Last Status Update |
-+=================================================================================================+=========================================+=====================+====================+
-| `openfarmsubsidies-scraper <https://github.com/holgerd77/openfarmsubsidies-scraper>`__          | Scraping                                | ``Alpha``           | 2016-02-05         |
-+-------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `openfarmsubsidies-elastic <https://github.com/holgerd77/openfarmsubsidies-elastic>`__          | Search Index                            | ``Alpha``           | 2016-03-04         |
-+-------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+ 
-| `openfarmsubsidies-backend-api <https://github.com/holgerd77/openfarmsubsidies-backend-api>`__  | Backend/API                             | ``Alpha``           | 2016-03-04         |
-+-------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
-| `openfarmsubsidies-frontend <https://github.com/holgerd77/openfarmsubsidies-frontend>`__        | Frontend                                | ``Alpha``           | 2016-03-04         |
-+-------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
+* `GitHub OpenFarmsubsidies Organization <https://github.com/openfarmsubsidies>`_
+
+It consists of the following repositories:
+
++---------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
+| Name (GitHub)                                                                         | Description                             | Status              | Last Status Update |
++=======================================================================================+=========================================+=====================+====================+
+| `openfarmsubsidies-scraper <https://github.com/openfarmsubsidies/scraper>`__          | Scraping                                | ``Beta``            | 2017-06-28         |
++---------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
+| `openfarmsubsidies-elastic <https://github.com/openfarmsubsidies/elastic>`__          | Search Index                            | ``Beta``            | 2017-06-28         |
++---------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+ 
+| `openfarmsubsidies-backend-api <https://github.com/openfarmsubsidies/backend-api>`__  | Backend/API                             | ``Beta``            | 2017-06-28         |
++---------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
+| `openfarmsubsidies-frontend <https://github.com/openfarmsubsidies/frontend>`__        | Frontend                                | ``Beta``            | 2017-06-28         |
++---------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
 
 This documentation provides guidance for installation, setup and technical
 aspects for the different sub modules.

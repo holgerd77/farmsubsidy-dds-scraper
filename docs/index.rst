@@ -12,11 +12,8 @@ researching EU farmsubsidy payments, build upon the experiences made during
 work on historically grown Farmsubsidy.org 
 `tech infrastructure <http://farmsubsidy.readthedocs.org>`_.
 
-The project has its own organization on GitHub:
-
-* `GitHub OpenFarmsubsidies Organization <https://github.com/openfarmsubsidies>`_
-
-It consists of the following repositories:
+The project has its own `organization on GitHub <https://github.com/openfarmsubsidies>`_ 
+and consists of the following repositories:
 
 +---------------------------------------------------------------------------------------+-----------------------------------------+---------------------+--------------------+
 | Name (GitHub)                                                                         | Description                             | Status              | Last Status Update |

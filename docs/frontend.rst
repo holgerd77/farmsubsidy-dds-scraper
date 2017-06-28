@@ -10,23 +10,14 @@ Requirements
 
 Main runtime library dependencies:
 
-* `Bootstrap 4 <http://v4-alpha.getbootstrap.com/>`_
-* `jQuery 2.2 <https://jquery.com/>`_
+* `Bootstrap 4 Alpha 6 <http://v4-alpha.getbootstrap.com/>`_
+* `jQuery 3.2.1 <https://jquery.com/>`_
 
 Main dev tools:
 
-* `Bower <http://bower.io>`_
 * `Sass (Ruby installation) <http://sass-lang.com/>`_
 * `http-server <https://github.com/indexzero/http-server>`_
 * `(Gulp.js) <http://gulpjs.com/>`_ (build automation)
-
-Installation
-^^^^^^^^^^^^
-
-Installation ``Bower`` web project dependencies (Bootstrap,...)
-from ``bower.json`` with::
-
-  bower install
 
 
 Running the server

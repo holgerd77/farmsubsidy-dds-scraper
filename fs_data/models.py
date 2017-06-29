@@ -54,7 +54,9 @@ def sps_str2list(sps_str):
     sps_list = []
     for tmp_sp_list in tmp_sps_list:
         name = tmp_sp_list[0]
-        amount = round(float(tmp_sp_list[1]), 2)
+        amount = 0
+        if '{' not in tmp_sp_list[1]:
+            amount = round(float(tmp_sp_list[1]), 2)
         sps_list.append({
             'name': name,
             'amount': amount,

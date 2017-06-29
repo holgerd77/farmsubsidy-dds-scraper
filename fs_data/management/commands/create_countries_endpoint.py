@@ -20,6 +20,7 @@ class Command(BaseCommand):
             c_dict.update({ 'agency_name': c.agency_name})
             c_dict.update({ 'info_url': c.info_url})
             c_dict.update({ 'data_url': c.data_url})
+            c_dict.update({ 'language_code': c.language_code})
             c_dict.update({ 'nc_symbol': c.nc_symbol})
             c_dict.update({ 'nc_sign': c.nc_sign})
             

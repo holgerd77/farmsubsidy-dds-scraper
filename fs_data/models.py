@@ -15,6 +15,8 @@ class Payment(models.Model):
     zip_code = models.CharField(max_length=30, blank=True)
     town = models.CharField(max_length=200)
     region = models.CharField(max_length=200, blank=True)
+    location_lat = models.FloatField(blank=True, null=True)
+    location_long = models.FloatField(blank=True, null=True)
     year = models.IntegerField()
     amount_nc = models.FloatField(blank=True, null=True)
     nc_conv_date = models.DateTimeField(blank=True, null=True)

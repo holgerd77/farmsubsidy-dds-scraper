@@ -77,8 +77,8 @@ class DjangoWriterPipeline(object):
             spider.log("Requesting geolocation for location: {l}".format(l=location), logging.INFO)
             gmaps = googlemaps.Client(key=settings.GOOGLE_MAPS_GEOLOCATION_API_KEY)
             geocode_result = gmaps.geocode(location)
-            item['location_lat'] = geocode_result['geometry']['location']['lat']
-            item['location_long'] = geocode_result['geometry']['location']['lng']
+            item['location_lat'] = geocode_result[0]['geometry']['location']['lat']
+            item['location_long'] = geocode_result[0]['geometry']['location']['lng']
             spider.log("Successfully added geo information.", logging.INFO)
             return item
         except Exception as e:

@@ -20,7 +20,7 @@ Installation
 
 The scraping infrastructure project can be installed by cloning the 
 `GitHub <https://github.com/openfarmsubsidies/scraper>`__ repository and 
-install the requirements into a ``Python 3.5`` virtualenv with::
+install the requirements into a ``Python 3.6`` virtualenv with::
 
     pip install -r requirements.txt
     pip install -r requirements_dev.txt # DEV requirements

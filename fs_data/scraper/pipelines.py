@@ -1,7 +1,9 @@
 import logging, requests
+from datetime import datetime
 from django.conf import settings
 from django.db.utils import IntegrityError
 from scrapy.exceptions import DropItem
+import googlemaps
 from dynamic_scraper.models import SchedulerRuntime
 
 class DjangoWriterPipeline(object):
@@ -69,10 +71,25 @@ class DjangoWriterPipeline(object):
                 spider.log("Yandex Translate API daily limit on text amount exceeded!", logging.WARNING)
         return item
     
+    def prepare_geo_location(self, item, spider):
+        try:
+            location = item['zip_code'] + ' ' + item['town'] + ', ' + item['country']
+            spider.log("Requesting geolocation for location: {l}".format(l=location), logging.INFO)
+            gmaps = googlemaps.Client(key=settings.GOOGLE_MAPS_GEOLOCATION_API_KEY)
+            geocode_result = gmaps.geocode(location)
+            item['location_lat'] = geocode_result['geometry']['location']['lat']
+            item['location_long'] = geocode_result['geometry']['location']['lng']
+            spider.log("Successfully added geo information.", logging.INFO)
+            return item
+        except Exception as e:
+            spider.log("Error while trying to add geo information!", logging.WARNING)
+            return item
+    
     
     def process_item(self, item, spider):
         item = self.prepare_currency_convs(item, spider)
         item = self.prepare_name_translation(item, spider)
+        item = self.prepare_geo_location(item, spider)
         
         item['year'] = int(item['year'])
         

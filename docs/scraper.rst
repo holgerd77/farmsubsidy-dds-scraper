@@ -207,7 +207,9 @@ Data format looks like the following::
       "year": 2015,
       "nc_conv_rate": 0.75459,
       "nc_conv_date": "2016-01-22",
-      "zip_code": "PH2"
+      "zip_code": "PH2",
+      "location_lat": 12.34567,
+      "location_long": 23.456789
     }
 
 Recipient Name Translation
@@ -236,6 +238,15 @@ Take the following formula for character estimates:
 Try to stay under 80% of day/month limit, distribute (translated) scraper runs to different
 days, avoid double runs.
 
+Gelocation Information
+^^^^^^^^^^^^^^^^^^^^^^
+
+Geolocation information is added via the ``Google Maps`` Geolocation API.
+``GOOGLE_MAPS_GEOLOCATION_API_KEY`` has to be set in ``settings.py`` file.
+
+There are strict API limits and API demand request can only be satisfied with a paid
+account, costing substantial amounts of money for scraping a larger country per year
+(> 100 €).
 
 Creating the Countries Endpoint
 -------------------------------

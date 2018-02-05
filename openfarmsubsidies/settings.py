@@ -32,6 +32,9 @@ ALLOWED_HOSTS = ['127.0.0.1', 'scraper.openfarmsubsidies.org',]
 YANDEX_TRANSLATE_API_ENDPOINT = 'https://translate.yandex.net/api/v1.5/tr.json/translate'
 YANDEX_TRANSLATE_API_KEY = os.environ['OPENFARMSUBSIDIES_YANDEX_TRANSLATE_API_KEY']
 
+# Google Maps Geolocation API
+GOOGLE_MAPS_GEOLOCATION_API_KEY = os.environ['OPENFARMSUBSIDIES_GOOGLE_MAPS_GEOLOCATION_API_KEY']
+
 
 # Application definition
 
